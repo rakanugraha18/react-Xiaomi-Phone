@@ -12,14 +12,13 @@ const NavBar = () => {
     >
       <nav id="header-navigation" className="h-full ">
         <Logo />
-        <List redirect="#" text="Store" title="Store"></List>
+        <List redirect="/store" text="Store" title="Store"></List>
         <List redirect="#" text="SmartPhone" title="SmartPhone"></List>
         <List separator="navigation__separator"></List>
         <List redirect="#" text="Discover" title="Discover"></List>
         <List redirect="#" text="Support" title="Support"></List>
         <SearchButton />
-        <Icon redirect="#" classname="shopping-cart"></Icon>
-        <Icon redirect="#" classname="shopping-cart"></Icon>
+        <Icon redirect="/cart" classname="shopping-cart"></Icon>
       </nav>
     </header>
   );

@@ -1,7 +1,8 @@
 import React from "react";
+import { redirect } from "react-router-dom";
 
 export default function TabButton(props) {
-  const { text, type } = props;
+  const { text, type, redirect } = props;
 
   const brColor = (type) => {
     switch (type) {
@@ -15,7 +16,9 @@ export default function TabButton(props) {
   };
   return (
     <>
-      <button className={`font-Inter h-8 ${brColor(type)}`}>{text}</button>
+      <a href={redirect}>
+        <button className={`font-Inter h-8 ${brColor(type)}`}>{text}</button>
+      </a>
     </>
   );
 }
