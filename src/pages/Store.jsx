@@ -34,7 +34,7 @@ export default function Store() {
                 <p className='mt-2 text-orange-600'>${product.price}</p>
               </div>
               <div className='mt-6 flex justify-between items-center'>
-               <button onClick={() => addToCart(product)} className='px-4 py-2 bg-orange-600 text-white text-xs font-bold uppercase rounded hover:bg-orange-700 focus:outline-none focus:bg-orange-700'>Add to cart</button>
+                <button onClick={() => addToCart(product)} className='px-4 py-2 bg-orange-600 text-white text-xs font-bold uppercase rounded hover:bg-orange-700 focus:outline-none focus:bg-orange-700'>Add to cart</button>
               </div>
             </div>
           ))

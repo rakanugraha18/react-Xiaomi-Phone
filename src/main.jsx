@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
 //import pages
@@ -9,18 +9,20 @@ import Store from './pages/Store.jsx'
 import Cart from './pages/Cart.jsx'
 import Account from './pages/Account.jsx';
 import Error from './pages/Error.jsx';
+import SmartPhone from './pages/Smartphone.jsx';
 
-{/*IMPORTANT: Other routes must go above error route */}
+{/*IMPORTANT: Other routes must go above error route */ }
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
-      {path: "/", element: <Home/>},
-     {path: "/store", element: <Store/>},
-     {path: "/cart", element: <Cart/>},
-     {path: "/account", element: <Account/>},
-     {path: "*", element: <Error/>}
+      { path: "/", element: <Home /> },
+      { path: "/store", element: <Store /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/account", element: <Account /> },
+      { path: "/smartphone", element: <SmartPhone /> },
+      { path: "*", element: <Error /> }
 
     ]
   },
@@ -28,6 +30,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

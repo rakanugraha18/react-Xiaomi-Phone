@@ -9,7 +9,7 @@ const NavBar = () => {
             <nav id="header-navigation" className="h-full ">
                 <Logo />
                 <List redirect="/store" text="Store" title="Store"></List>
-                <List redirect="#" text="SmartPhone" title="SmartPhone"></List>
+                <List redirect="/smartphone" text="SmartPhone" isActive="active" title="SmartPhone"></List>
                 <List separator="navigation__separator"></List>
                 <List redirect="#" text="Discover" title="Discover"></List>
                 <List redirect="#" text="Support" title="Support"></List>
