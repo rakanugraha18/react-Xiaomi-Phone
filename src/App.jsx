@@ -1,11 +1,14 @@
-import NavBar from "./components/molecule/Navbar"
+import NavBar from "./components/molecule/Navbar";
+import Tab from "./components/molecule/Tab";
 // import List from "./components/Atoms/Navbar/List"
 
 function App() {
-
   return (
-    <NavBar/>
-  )
+    <>
+      <NavBar />
+      <Tab />
+    </>
+  );
 }
 
-export default App
+export default App;
