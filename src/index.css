@@ -2,150 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-#top-site-header {
-    box-shadow: 0 6px 16px 0 #1919190f;
-    top: 0;
-    z-index: 30;
-}
+/* 
+----------------
+RESET CSS START
+----------------
+*/
 
-#header-navigation {
-    align-items: center;
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
 }
 
-/* MI - HOME LOGO */
-#nav-logo {
-    box-sizing: initial;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 100;
-}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Inter", sans-serif;
+  }
 
-#nav-logo-link,
-#nav-logo .logo-xiaomi {
-    display: block;
-    height: 100%;
-    width: 100%;
-}
+input, button, textarea, select {
+    font: inherit;
+  }
 
-#nav-logo .logo-mi-home {
-    transform: translateX(-112px);
-    transition: transform 0.3s;
-}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
 
-#nav-logo:hover .logo-mi-home {
-    transform: translateX(0px);
-}
+/* RESET CSS END */
 
-/*Group links*/
-
-.navigation__group {
-    display: flex;
-    height: inherit;
-}
-
-.navigation__separator {
-    flex-grow: 1;
-}
-
-.navigation__item {
-    color: #191919;
-    height: inherit;
-}
-
-.navigation__item .navigation__link {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    font-size: 16px;
-    height: 100%;
-    padding: 0 8px;
-}
-
-.navigation__item .link-border {
-    border-bottom: 3px solid #00000000;
-    border-top: 3px solid #0000;
-    box-sizing: border-box;
-    transition: border 0.2s ease-in-out;
-}
-
-.navigation__item .link-border:hover {
-    border-bottom: 3px solid #ff6900;
-    border-top: 3px solid #0000;
-    box-sizing: border-box;
-    transition: border 0.2s ease-in-out;
-}
-
-.navigation__shortcut .shortcut__item .shortcut__item--wrapper {
-    line-height: 1;
-    position: relative;
-}
-
-.navigation__shortcut .shortcut__icon {
-    font-size: 18px;
-}
-
-.only-medium {
-    display: none;
-}
-
-.only-phone {
-    display: flex;
-}
-
-.active {
-    color: #ff6900;
-}
-
-/*MD*/
-
-@media (min-width: 768px) {
-    .navigation__item {
-        margin: 0 8px;
-    }
-
-    .only-medium {
-        display: flex;
-    }
-
-    .only-phone {
-        display: none;
-    }
-}
-
-/*LG*/
-
-@media (min-width: 1025px) {
-    #header-navigation {
-        padding: 0 16px;
-    }
-
-    .navigation__logo {
-        height: 28px;
-        padding: 0 16px;
-        width: 28px;
-    }
-
-    .navigation__shortcut .shortcut__icon {
-        font-size: 20px;
-    }
-}
-
-/*XL*/
-
-@media (min-width: 1440px) {
-    .navigation__item {
-        margin: 0 16px;
-    }
-
-    .navigation__shortcut .shortcut__icon {
-        font-size: 28px;
-    }
-}
-
+/* 
+----------------
+ICONS CSS START
+----------------
+*/
 @font-face {
     font-family: "micon"; /* Project id 2832292 */
     src: url("iconfont.eot?t=1693986886500"); /* IE9 */
@@ -872,9 +761,9 @@
     content: "\e618";
 }
 
-/* NAVBAR
-  -----------------------
-  */
+/* ICONS CSS END */
+
+/* NAVBAR CSS START */
 
 #top-site-header {
     box-shadow: 0 6px 16px 0 #1919190f;
@@ -1016,9 +905,9 @@
     }
 }
 
-/* FOOTER
-  -----------------------
-  */
+/* NAVBAR CSS END */
+
+/* FOOTER CSS START */
 
 #list ul li {
     color: #898989;
@@ -1041,3 +930,73 @@
     font-size: 16px;
     text-transform: uppercase;
 }
+
+/* FOOTER CSS END */
+
+/*CART CSS START*/
+
+.nav-checkout-step {
+    align-items: center;
+    color: #d0d0d0;
+    display: flex;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  .first~.nav-checkout-step {
+    color: #d0d0d0;
+    border-color: #d0d0d0;
+  
+  }
+  
+  .first~.nav-checkout-step:before {
+    content: "";
+    background-color: #d0d0d0;
+    height: 1px;
+    margin: 0 18px;
+    width: 0;
+    /* Additional pseudo-element styles here, if needed */
+  }
+  
+  @media (min-width: 768px) {
+  
+    .first~.nav-checkout-step:before {
+        width: 57px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+  
+    .first~.nav-checkout-step:before {
+        width: 157px;
+    }
+  }
+  
+  
+  @media (min-width: 1280px) {
+  
+    .first~.nav-checkout-step:before {
+        width: 257px;
+    }
+  
+  
+  }
+  
+  
+  .nav-checkout-number {
+    align-items: center;
+    border: 2px solid;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: inline-flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+    margin-right: 8px;
+  }
+  
+  .first~.nav-checkout-number {
+    color: #d0d0d0;
+  }
+
+/*CART CSS END*/
