@@ -1,9 +1,12 @@
-
+import RedmiSection from "../components/molecule/Smartphone/RedmiSection";
 import XiaomiSection from "../components/molecule/Smartphone/XiaomiSection";
 
 const SmartPhone = () => {
     return (
-        <XiaomiSection></XiaomiSection>
+        <>
+            <XiaomiSection/>
+            <RedmiSection />
+        </>
     );
 };
 
