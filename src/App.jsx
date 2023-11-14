@@ -15,13 +15,11 @@ function App() {
   return (
     <>
       <CartProvider>
-
         {showNavBar && <NavBar />}
         <main>
           <Outlet />
         </main>
         {showFooter && <Footer />}
-
       </CartProvider>
     </>
   );
