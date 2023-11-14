@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import About from "../pages/About";
 import Leadership from "../pages/Leadership";
 import Agreement from "../pages/Agreement";
-import Privasi from "../pages/Privasi";
+import Privacy from "../pages/Privacy";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
     element: <Agreement />,
   },
   {
-    path: "/Privasi",
-    element: <Privasi />,
+    path: "/Privacy",
+    element: <Privacy />,
   },
 ]);

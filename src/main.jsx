@@ -12,7 +12,7 @@ import Error from "./pages/Error.jsx";
 import About from "./pages/About.jsx";
 import Agreemnt from "./pages/Agreement.jsx";
 import Leadership from "./pages/Leadership.jsx";
-import Privasi from "./pages/Privasi.jsx";
+import Privacy from "./pages/Privacy.jsx";
 
 {
   /*IMPORTANT: Other routes must go above error route */
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       { path: "/About", element: <About /> },
       { path: "/Agreement", element: <Agreemnt /> },
       { path: "/Leadership", element: <Leadership /> },
-      { path: "/Privasi", element: <Privasi /> },
+      { path: "/Privacy", element: <Privacy /> },
     ],
   },
 ]);
