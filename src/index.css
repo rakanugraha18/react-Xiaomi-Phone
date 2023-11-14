@@ -39,16 +39,10 @@ h6 {
   overflow-wrap: break-word;
 }
 
-.background-text-images {
-  background-image: url("../src/assets/about/service-background-text.svg");
+.active {
+  color: #ff6900;
+  border-color: #ff6900;
 }
-
-.background-text-images2 {
-  background-image: url("../src/assets/about/service-background-text.svg");
-  width: 100%;
-  height: auto;
-}
-
 /* RESET CSS END */
 
 /* 
@@ -1016,11 +1010,12 @@ ICONS CSS START
 
 /*CART CSS END*/
 
-/* Navlink */
+.background-text-images {
+  background-image: url("../src/assets/about/service-background-text.svg");
+}
 
-.active {
-  font-weight: normal;
-  color: #ff6900;
-  border-color: #ff6900;
-  background-color: #ff6a002c;
+.background-text-images2 {
+  background-image: url("../src/assets/about/service-background-text.svg");
+  width: 100%;
+  height: auto;
 }

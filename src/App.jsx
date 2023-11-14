@@ -2,7 +2,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import { CartProvider } from "./context/cartProvider";
 import Footer from "./components/molecule/Footer";
 import NavBar from "./components/molecule/Navbar";
-import Tab from "./components/molecule/Tab";
 
 function App() {
   // Use the useLocation hook to get the current location
