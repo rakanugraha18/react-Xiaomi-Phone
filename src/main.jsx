@@ -14,6 +14,7 @@ import About from "./pages/About.jsx";
 import Agreement from "./pages/Agreement.jsx";
 import Leadership from "./pages/Leadership.jsx";
 import Privacy from "./pages/Privacy.jsx";
+import PocoSection from "./components/molecule/Smartphone/PocoSection.jsx";
 
 {
   /*IMPORTANT: Other routes must go above error route */
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       { path: "/Agreement", element: <Agreement /> },
       { path: "/Leadership", element: <Leadership /> },
       { path: "/Privacy", element: <Privacy /> },
+      { path: "/PocoSection", element: <PocoSection /> },
     ],
   },
 ]);
