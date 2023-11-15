@@ -2,54 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
-----------------
-RESET CSS START
-----------------
-*/
 
-*,
-*::before,
-*::after {
+*{
+  text-decoration: none;
+  list-style: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Inter", sans-serif;
+/* ICONS CSS END */
+
+
+/*CSS TO TOGGLE BUTTON ICON */
+
+.toggle_icon a button div {
+  display: none;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+@media (min-width: 720px) {
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+  .toggle_icon a button div {
+    display: inline-block;
+  }
+  
+  }
 
-.active {
-  color: #ff6900;
-  border-color: #ff6900;
-}
-/* RESET CSS END */
-
-/* 
-----------------
-ICONS CSS START
-----------------
-*/
 @font-face {
   font-family: "micon"; /* Project id 2832292 */
   src: url("iconfont.eot?t=1693986886500"); /* IE9 */
@@ -778,15 +756,16 @@ ICONS CSS START
   content: "\e618";
 }
 
-/* ICONS CSS END */
-
-/* NAVBAR CSS START */
+/* NAVBAR
+-----------------------
+*/
 
 #top-site-header {
   box-shadow: 0 6px 16px 0 #1919190f;
   top: 0;
   z-index: 20;
 }
+
 
 #header-navigation {
   align-items: center;
@@ -820,6 +799,7 @@ ICONS CSS START
   transform: translateX(0px);
 }
 
+
 /*Group links*/
 
 .navigation__group {
@@ -836,6 +816,7 @@ ICONS CSS START
   height: inherit;
 }
 
+
 .navigation__item .navigation__link {
   align-items: center;
   cursor: pointer;
@@ -849,14 +830,14 @@ ICONS CSS START
   border-bottom: 3px solid #00000000;
   border-top: 3px solid #0000;
   box-sizing: border-box;
-  transition: border 0.2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 .navigation__item .link-border:hover {
   border-bottom: 3px solid #ff6900;
   border-top: 3px solid #0000;
   box-sizing: border-box;
-  transition: border 0.2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 .navigation__shortcut .shortcut__item .shortcut__item--wrapper {
@@ -880,51 +861,57 @@ ICONS CSS START
 
 @media (min-width: 768px) {
   .navigation__item {
-    margin: 0 8px;
+      margin: 0 8px;
   }
 
   .only-medium {
-    display: flex;
+      display: flex;
   }
 
   .only-phone {
-    display: none;
+      display: none;
   }
+
 }
 
 /*LG*/
 
 @media (min-width: 1025px) {
+
   #header-navigation {
-    padding: 0 16px;
+      padding: 0 16px;
   }
 
   .navigation__logo {
-    height: 28px;
-    padding: 0 16px;
-    width: 28px;
+      height: 28px;
+      padding: 0 16px;
+      width: 28px;
   }
 
   .navigation__shortcut .shortcut__icon {
-    font-size: 20px;
+      font-size: 20px;
   }
 }
+
 
 /*XL*/
 
 @media (min-width: 1440px) {
+
   .navigation__item {
-    margin: 0 16px;
+      margin: 0 16px;
   }
 
   .navigation__shortcut .shortcut__icon {
-    font-size: 28px;
+      font-size: 28px;
   }
+
 }
 
-/* NAVBAR CSS END */
 
-/* FOOTER CSS START */
+/* FOOTER
+-----------------------
+*/
 
 #list ul li {
   color: #898989;
@@ -948,9 +935,11 @@ ICONS CSS START
   text-transform: uppercase;
 }
 
-/* FOOTER CSS END */
 
-/*CART CSS START*/
+body {
+
+  font-family: "Inter", sans-serif;
+}
 
 .nav-checkout-step {
   align-items: center;
@@ -960,12 +949,13 @@ ICONS CSS START
   position: relative;
 }
 
-.first ~ .nav-checkout-step {
+.first~.nav-checkout-step {
   color: #d0d0d0;
   border-color: #d0d0d0;
+
 }
 
-.first ~ .nav-checkout-step:before {
+.first~.nav-checkout-step:before {
   content: "";
   background-color: #d0d0d0;
   height: 1px;
@@ -975,22 +965,29 @@ ICONS CSS START
 }
 
 @media (min-width: 768px) {
-  .first ~ .nav-checkout-step:before {
-    width: 57px;
+
+  .first~.nav-checkout-step:before {
+      width: 57px;
   }
 }
 
 @media (min-width: 1024px) {
-  .first ~ .nav-checkout-step:before {
-    width: 157px;
+
+  .first~.nav-checkout-step:before {
+      width: 157px;
   }
 }
 
+
 @media (min-width: 1280px) {
-  .first ~ .nav-checkout-step:before {
-    width: 257px;
+
+  .first~.nav-checkout-step:before {
+      width: 257px;
   }
+
+
 }
+
 
 .nav-checkout-number {
   align-items: center;
@@ -1004,12 +1001,241 @@ ICONS CSS START
   margin-right: 8px;
 }
 
-.first ~ .nav-checkout-number {
+.first~.nav-checkout-number {
   color: #d0d0d0;
 }
 
-/*CART CSS END*/
+/* Home CSS */
 
+body {
+  font-family: 'Inter';
+}
+
+.site-banner.site-banner--light {
+
+  color: #191919;
+}
+
+.site-banner .site-banner__image {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.site-banner .site-banner__image>img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+img {
+  font-size: 12px;
+  line-height: 1.2;
+}
+img {
+  border-style: none;
+}
+
+
+.site-banner { 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  max-height: 800px;
+  min-height: auto;
+  overflow: hidden;
+}
+
+
+
+.site-banner .site-banner__info { 
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  left: 0%;
+  width: 100%;
+  padding: 3.9vw 0;
+  text-align: center; 
+  
+}
+
+
+
+
+@media (min-width: 720px) {
+ 
+#top-banners .site-banner .site-banner__info {
+  box-sizing: border-box;
+  text-align: left; 
+  left: 10%;
+  justify-content: left;
+} 
+
+
+}
+
+
+
+
+
+
+ 
+
+
+.site-banner__title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: inherit;
+  display: block;
+  display: -webkit-box;
+  font-size: 55px;
+  font-weight: 600;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.site-banner .site-banner__info .site-banner__subtitle {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: inherit;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 0.7vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+
+ 
+
+
+.site-banner__price {
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 16px;
+}
+.mi-price {
+  word-break: keep-all;
+}
+
+
+@media (min-width: 1024px){
+   .site-banner__price {
+  font-size: 36px;
+  margin-top: 3.125vw;
+
+}
+
+}
+.site-banner__price strong {
+  font-weight: 700;
+}
+
+.mi-price strong {
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+
+.site-banner__actions {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row;
+  margin-top: 15px;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+.site-banner .site-banner__info .site-banner__actions .site-banner__link {
+  --btn-padding: 9px 30px;
+}
+}
+.site-banner__link {
+  text-decoration: none;
+}
+@media screen and (min-width: 721px) and (min-width: 1441px) and (max-width: 1920px) {
+.mi-btn.mi-btn--link-default {
+  --link-font-size: 1.25vw;
+}}
+@media  (min-width: 721px) {
+  
+#top-banners .site-banner__actions {
+      align-items: center;
+
+      justify-content: left;
+  
+  }
+}
+
+
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+.site-banner .site-banner__info .site-banner__actions .site-banner__link {
+  text-decoration: none;
+}}
+
+
+.cta-button-outline {
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  padding: 7px 21px;
+  border-radius: 10px;
+}
+
+
+.cta-button-simple {
+  border: 0;
+  color: rgb(0, 0, 0);
+  padding: 7px 21px;
+  font-size: 16px;
+}
+
+.micon-link-arrow {
+  margin-left: 0px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#top-banners i {
+  display:none;
+}
+
+
+@media  (min-width:720px) {
+  .cta-button-outline {
+      border: none;
+  
+  }
+
+  #top-banners i {
+      display: inline-block;
+  }
+}
+
+/* About CSS */
 .background-text-images {
   background-image: url("../src/assets/about/service-background-text.svg");
 }
