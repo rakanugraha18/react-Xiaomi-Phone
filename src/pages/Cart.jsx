@@ -13,7 +13,7 @@ const Cart = () => {
       >
         <nav
           id="nav-checkout"
-          className="w-full max-w-full flex flex-col md:flex-row flex-wrap items-start justify-center md:items-center gap-5 md:gap-0 px-8 md:px-0 bg-white h-full mt-1"
+          className="hidden w-full max-w-full flex-col md:flex md:flex-row flex-wrap items-start justify-center md:items-center gap-5 md:gap-0 px-8 md:px-0 bg-white h-full mt-1"
         >
           <div className="nav-checkout-step first sm:pl-[35px]">
             <span className="nav-checkout-number active bg-[#ff6700] text-[#fff]"
