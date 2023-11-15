@@ -46,12 +46,12 @@ const Variants = cva(
 );
 
 
-const CustomButton = ({ to, text, intent, border, hover, rounded, icon, order }) => {
+const CustomButton = ({onClick, to, text, intent, border, hover, rounded, icon, order }) => {
     const variants = { intent, border, hover, rounded, icon, order };
   
     return (
         <Link to={to}>
-        <button className={Variants(variants)}>
+        <button onClick={onClick} className={Variants(variants)}>
           {order === 'iconFirst' && icon && <div>{icon}&nbsp;</div>}
           {text}
           {order === 'textFirst' && icon && <div>&nbsp;{icon}</div>}

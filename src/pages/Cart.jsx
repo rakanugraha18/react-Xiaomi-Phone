@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/cartProvider'
 import EmptyCart from '../components/molecule/Cart/EmptyCart'
+import CustomButton from '../components/Atoms/WithCVA/CustomButton'
 
 
 const Cart = () => {
@@ -44,23 +45,9 @@ const Cart = () => {
           </div>
         </div>
         <div className="flex gap-4">
-          <button
-            className="px-4 py-2 bg-orange-800 text-white text-xs font-bold uppercase rounded hover:bg-orange-700 focus:outline-none focus:bg-orange-700"
-            onClick={() => {
-              addToCart(item)
-            }}
-          >
-            +
-          </button>
+        <CustomButton onClick={() => {addToCart(item)}} text="+" intent="accent_bg"/>
           <p>{item.quantity}</p>
-          <button
-            className="px-4 py-2 bg-orange-800 text-white text-xs font-bold uppercase rounded hover:bg-orange-700 focus:outline-none focus:bg-orange-700"
-            onClick={() => {
-              removeFromCart(item)
-            }}
-          >
-            -
-          </button>
+        <CustomButton onClick={() => {removeFromCart(item)}} text="-" intent="accent_bg"/>
         </div>
       </div>
     ))}
@@ -69,14 +56,7 @@ const Cart = () => {
     cartItems.length > 0 ? (
       <div className="flex flex-col justify-between items-center">
     <h1 className="text-lg font-bold">Total: Rp {getCartTotal()}</h1>
-    <button
-      className="px-4 py-2 bg-orange-800 text-white text-xs font-bold uppercase rounded hover:bg-orange-700 focus:outline-none focus:bg-orange-700"
-      onClick={() => {
-        clearCart()
-      }}
-    >
-      Hapus
-    </button>
+    <CustomButton onClick={() => {clearCart()}} text="Hapus" intent="accent_bg"/>
   </div>
     ) : (
        <EmptyCart/>
