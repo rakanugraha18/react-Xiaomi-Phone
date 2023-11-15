@@ -2,6 +2,7 @@ import React from 'react'
 import XiaomiBanner from '../components/molecule/Home/XiaomiBanner'
 import RedmiBanner from '../components/molecule/Home/RedmiBanner'
 import LatestProduct from '../components/molecule/Home/LatestProducts/LatestProducts'
+import PhoneLatest from '../components/molecule/Home/LatestProducts/PhoneLatest'
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
      </div> 
      <div id='latestproduct' className='max-w-full w-full flex flex-col sm:flex-row sm:space-y-[15px] lg:space-y-[0px] md:space-x-[15px]'>
       <LatestProduct/>
-      <LatestProduct/>
+      <PhoneLatest/>
      </div>
     </div>
   )

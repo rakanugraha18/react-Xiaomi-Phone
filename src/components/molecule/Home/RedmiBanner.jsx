@@ -61,7 +61,7 @@ const RedmiBanner = () => {
              <div className="flex-inline space-x-[15px] justify-center md:justify-left w-full">
                <div className="flex">
                     <CustomButton text="Beli sekarang" intent="dark" border="yes" hover="no" rounded="yes"/>
-                    <div className="toogle_icon">     <CustomButton text="Learn More  " intent="dark_nobg" border="custom" hover="custom" rounded="yes" icon=">" order="textFirst"/>
+                    <div className="toogle_icon">     <CustomButton text="Learn More" intent="dark_nobg" border="custom" hover="custom" rounded="yes" icon=">" order="textFirst"/>
                 </div></div>
             </div>
           </div>
