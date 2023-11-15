@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CustomButton from '../../Atoms/WithCVA/CustomButton'
 const EmptyCart = () => {
   return (
     <div id="cart-empty" class="w-full max-w-full">
@@ -12,13 +12,20 @@ const EmptyCart = () => {
       <p class="text-[#b0b0b0] text-[20px] leading-[24px] mt-[26px]">
         Keranjang Anda kosong.
       </p>
-      {/* Add later on*/}
-      <button
-        class="py-[12px] px-[36px] mt-[26px] bg-[#ff6700] text-white"
-        aria-label="Belanja sekarang >"
-      >
-        Belanja sekarang &gt;
-      </button>
+     
+      
+     <div className='hidden lg:block py-4'>
+       
+      <CustomButton to="/store" text="Belanja sekarang" intent="accent_bg" icon=">" order="textFirst"/>
+   
+    </div>
+
+    <div className='block lg:hidden py-4'>
+       
+       <CustomButton to="/store" text="Belanja sekarang" intent="accent_nobg" icon=">" order="textFirst"/>
+    
+    </div>
+
     </section>
   </div>
   )

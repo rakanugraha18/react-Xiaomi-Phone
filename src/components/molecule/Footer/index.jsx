@@ -8,13 +8,11 @@ const Footer = () => {
     <footer className="w-full h-fit bg-[#191919] text-white flex justify-center">
       <div
         id="footer-wrapper"
-        className="p-5 md:p-20 max-w-[1500px] pt-[64px] flex  h-full w-full flex-col"
-      >
-        <div>
+        className="p-5 md:p-20 max-w-[1500px] pt-[64px] flex  h-full w-full flex-col">
+        <div className="flex flex-col lg:flex-row">
           <div
             id="list"
-            className="hidden md:flex flex-row text-left lg:w-[65%]  h-full"
-          >
+            className="hidden md:flex flex-row text-left w-full lg:w-[65%]  h-full">
             <div className="w-[40%] xl:w-[30%] h-full pr-5 ">
               <h3 className="mb-[16px]">PRODUK</h3>
               <ul className="flex flex-col">
@@ -22,10 +20,10 @@ const Footer = () => {
                   <a href="">Redmi Note 11</a>
                 </li>
                 <li>
-                  <a href="">Redmi 10A</a>
+                  <a href="/">Redmi 10A</a>
                 </li>
                 <li>
-                  <a href="">Redmi 10C</a>
+                  <a href="/">Redmi 10C</a>
                 </li>
               </ul>
             </div>
@@ -50,27 +48,26 @@ const Footer = () => {
               <h3 className="mb-[16px]">TENTANG</h3>
               <ul className="flex flex-col">
                 <li>
-                  <a href="./about.html">Tentang Kita</a>
+                  <a href="./about">Tentang Kita</a>
                 </li>
                 <li>
-                  <a href="./founders.html">Leadership Team</a>
+                  <a href="./founders">Leadership Team</a>
                 </li>
                 <li>
-                  <a href="./privacy.html">Kebijakan privasi</a>
+                  <a href="./privacy">Kebijakan privasi</a>
                 </li>
                 <li>
-                  <a href="./agreement.html">Integrity and compliance</a>
+                  <a href="./agreement">Integrity and compliance</a>
                 </li>
                 <li>
-                  <a href="./index.html">Trust Center</a>
+                  <a href="./index">Trust Center</a>
                 </li>
               </ul>
             </div>
           </div>
           <div
             id="info"
-            className="p-0 lg:pl-20 md:flex flex-col w-full lg:w-[35%] bg-[#191919] h-full items-start justify-between"
-          >
+            className="p-0 lg:pl-20 md:flex flex-col w-full lg:w-[35%] bg-[#191919] h-full items-start justify-between">
             <div id="info-warpper" className="w-full">
               <div className="flex lg:flex-col w-full justify-between">
                 <div id="footer-follow">
@@ -81,12 +78,10 @@ const Footer = () => {
                         href="https://www.facebook.com/XiaomiIndonesia"
                         target="_blank"
                         rel="noopenner noreferrer nofollow "
-                        aria-label="Social Media-facebook"
-                      >
+                        aria-label="Social Media-facebook">
                         <i
                           className="micon micon-facebook"
-                          id="facebook-social"
-                        ></i>
+                          id="facebook-social"></i>
                       </a>
                     </li>
                     <li>
@@ -94,8 +89,7 @@ const Footer = () => {
                         href="https://instagram.com/xiaomi.indonesia?igshid=4e0hzv0q2nmu"
                         target="_blank"
                         rel="noopenner noreferrer nofollow "
-                        aria-label="Social Media-instagram"
-                      >
+                        aria-label="Social Media-instagram">
                         <i className="micon micon-instagram" id="ig-social"></i>
                       </a>
                     </li>
@@ -104,12 +98,10 @@ const Footer = () => {
                         href="https://twitter.com/xiaomiindonesia"
                         target="_blank"
                         rel="noopenner noreferrer nofollow"
-                        aria-label="Social Media-twitter"
-                      >
+                        aria-label="Social Media-twitter">
                         <i
                           className="micon micon-twitter"
-                          id="twitter-social"
-                        ></i>
+                          id="twitter-social"></i>
                       </a>
                     </li>
                     <li>
@@ -117,8 +109,7 @@ const Footer = () => {
                         href="https://www.youtube.com/channel/UC4qeOFEmsAHF2jQ4y0qHikw"
                         target="_blank"
                         rel="noopenner noreferrer nofollow"
-                        aria-label="Social Media-youtube"
-                      >
+                        aria-label="Social Media-youtube">
                         <i className="micon micon-youtube" id="yt-social"></i>
                       </a>
                     </li>
@@ -139,8 +130,7 @@ const Footer = () => {
                       />
                       <button
                         id="submitt-icon"
-                        className="absolute top-0 right-[10px] px-1 flex h-full items-center"
-                      >
+                        className="absolute top-0 right-[10px] px-1 flex h-full items-center">
                         <i className="micon micon-forward text-sm"></i>
                       </button>
                     </div>
@@ -156,8 +146,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Temukan di Google Play Store"
-                  className="flex justify-between"
-                >
+                  className="flex justify-between">
                   <img
                     src={GooglePlay}
                     className="h-[20px]"
@@ -180,16 +169,14 @@ const Footer = () => {
               <a
                 href="//www.mi.co.id/id/sitemap/"
                 target="_blank"
-                class="text-white flex items-center"
-              >
+                class="text-white flex items-center">
                 Peta Situs
               </a>
             </div>
             <div class="w-fit">
               <a
                 href="//www.mi.co.id/id/select-location/"
-                class="text-white flex items-center"
-              >
+                class="text-white flex items-center">
                 Indonesia / Indonesia
                 <i class="micon micon-language-earth locale__icon text-md ml-[10px] text-white"></i>
               </a>
