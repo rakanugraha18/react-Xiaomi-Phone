@@ -24,6 +24,15 @@ const NavBar = () => {
         <List redirect="#" text="Support" title="Support"></List>
         <SearchButton />
         <Icon redirect="/cart" classname="shopping-cart"></Icon>
+        <li class="navigation__item shortcut__item shortcut__item-user only-medium">
+                        <div class="navigation__link" role="button" tabindex="0">
+                            <div class="shortcut__item--wrapper">
+                                <a href="/account">
+                                    <i class="micon micon-account shortcut__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
       </nav>
     </header>
   );
