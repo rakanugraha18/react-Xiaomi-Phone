@@ -36,7 +36,8 @@ const login = () => {
         <div className="w-full flex flex-col gap-[0px] h-[90vh]">
             <header className="p-6 justify-between h-[100px] flex w-full gap-5 items-start">
                 <div className="flex gap-5 w-fit items-center">
-                    <img className="w-[40px] h-[40px]" src={Logo} alt=""/>
+                  <a href="/">
+                    <img className="w-[40px] h-[40px]" src={Logo} alt=""/></a>
                     <h1 className="text-[28px]">Akun Xiaomi</h1>
                 </div>
 
