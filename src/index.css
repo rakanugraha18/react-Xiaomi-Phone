@@ -1273,3 +1273,74 @@ select:focus{
   box-shadow: 0 0 5px 0px rgb(199, 199, 199);
 }
 
+
+
+ .mi-layout__card {
+  text-align: left;
+}
+ .mi-layout__card {
+  border-radius: 4px;
+  box-shadow: 0 20px 50px 0 hsla(0,0%,64%,.1);
+  margin: 0 auto 80px;
+  padding: 40px 45px;
+}
+.mi-layout__card {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.qr-switch-wrap {
+  outline: 1px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.mi-qr-account-switch {
+  background-size: cover;
+  border: 32px solid #ff5c00;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.mi-qr-account-switch {
+  height: 64px;
+  opacity: .4;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  width: 64px;
+  z-index: 1000;
+}
+
+.qr-account-switch:hover {
+  height: 64px;
+  opacity: 1;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  width: 64px;
+  z-index: 1000;
+}
+
+
+.mi-qr-account-switch__icon {
+  font-size: 36px;
+  position: absolute;
+  top: -22px; right: -22px;
+}
+.qr-account-icon {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: inherit;
+  display: inline-block;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  vertical-align: -0.125em;
+}
