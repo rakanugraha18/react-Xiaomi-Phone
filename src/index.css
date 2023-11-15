@@ -1231,31 +1231,6 @@ img {
 
 /*-------Form--------*/
 
-.form-container {
-  box-shadow: 0 0 20px 0px rgb(222, 216, 216);
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-#form-switch  span{
-  padding: 0 10px;
-  cursor: pointer;
-  width: 100px;
-  display: inline-block;
-}
-
-#indicator{
-  transform: translateX(100px);
-  transition: transform 1s; 
-}
-
-#account-form  form{
-  max-width: 400px;
-  padding: 0 20px;
-  position: absolute;
-
-  transition: transform 1s;
-}
 
 
 #account-form button {
@@ -1287,17 +1262,14 @@ select:focus{
   margin-top: 20px;
 }
 
-input {
+.accountinput {
   border: 1px solid rgb(213, 213, 213);
   background:rgb(226, 226, 226);
   color:#8a8686
 
 }
 
-#google-button, input {
-  box-shadow: 0 0 10px 0px rgb(199, 199, 199);
+#google-button, .accountinput {
+  box-shadow: 0 0 5px 0px rgb(199, 199, 199);
 }
 
-button, input {
-  border-radius: 10px;
-}
