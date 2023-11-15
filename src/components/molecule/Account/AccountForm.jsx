@@ -11,7 +11,7 @@ const TabbedInterface = () => {
   };
 
   return (
-    <div id='account-form' className="container border mx-auto mt-8">
+    <div id='account-form' className="container px-[50px] py-8 border mx-auto mt-[-50px]">
       <ul className="flex">
         <li
           onClick={() => handleTabClick('login')}
@@ -35,7 +35,7 @@ const TabbedInterface = () => {
 
       <div>
         {activeTab === 'login' && (
-          <div className="p-[50px]">
+          <div>
             {/* Login form */}
             <form>
               <div className='flex flex-col space-y-5'>
@@ -65,7 +65,7 @@ const TabbedInterface = () => {
         )}
 
         {activeTab === 'register' && (
-          <div className="p-[50px] border">
+          <div>
             {/* Registration form goes here */}
             <form>
                     <input type="email" placeholder="Email"
