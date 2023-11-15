@@ -18,35 +18,19 @@ export default function PocoSection() {
     getApiPoco();
   }, []);
 
-  console.log(dataPoco);
-
   return (
     <>
-      <section className="m-[9px] md:flex md:justify-evenly md:hover:cursor-pointer md:w-full">
-        {/*         
-        <LongCard
-          id={poco.id}
-          Title={poco.name}
-          Specs="Ori Grade triple 50MP Camera | Snapdragon® Gen 1"
-          StartingPrice={poco.price}
-          PhonePic={poco.image}
-          Button="md:my-[14px] md:flex md:gap-1"
-          rating={poco.rating}
-          Discount={poco.discountPercentage}
-          classname="md:bg-[#D0D0D0] md:text-white"
-          Status="Habis"
-        ></LongCard> */}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 mt-2 md:mt-0">
+      <section className="flex flex-wrap">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center gap-2 mt-2 md:mt-0">
           {dataPoco.length > 0 ? (
             <>
               {dataPoco.map((poco, i) => {
                 return (
-                  <div>
+                  <div key={i}>
                     <ShortCard
-                      id={poco.id}
+                      id="1"
                       Title={poco.name}
-                      Specs="Ori Grade triple 50MP Camera | Snapdragon® Gen 1"
+                      Specs="Snapdragon 778G | 108MP"
                       StartingPrice={poco.price}
                       PhonePic={poco.image}
                       Button="md:my-[14px] md:flex md:gap-1"
@@ -68,14 +52,21 @@ export default function PocoSection() {
 }
 
 {
-  /* <ShortCard
-  Title="Xiaomi 12T 5G"
-  Specs="Ultra Stable 108MP Main Camera with OIS"
-  StartingPrice="5.999.000"
-  PreviousPrice="Rp 6.599.000"
-  Discount="9%"
-  DiscountBorder="text-[#ff6900] border border-[#ff6900]"
-  PhonePic="/public/smartphone/3bmobile.webp"
-  Button="md:my-[14px] md:flex md:gap-1"
-></ShortCard> */
+  /* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 items-center gap-5 mt-2 mb-10">
+  {dataPoco.map((poco) => (
+    <div key={poco.id}>
+      <LongCard
+        Title={poco.name}
+        Specs="Ori Grade triple 50MP Camera | Snapdragon® Gen 1"
+        StartingPrice={poco.price}
+        PhonePic={poco.image}
+        Button="md:my-[14px] md:flex md:gap-1"
+        rating={poco.rating}
+        Discount={poco.discountPercentage}
+        classname="md:bg-[#D0D0D0] md:text-white"
+        Status="Habis"
+      ></LongCard>
+    </div>
+  ))}
+</div> */
 }
