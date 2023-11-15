@@ -14,19 +14,7 @@
 /* ICONS CSS END */
 
 
-/*CSS TO TOGGLE BUTTON ICON */
 
-.toggle_icon a button div {
-  display: none;
-}
-
-@media (min-width: 720px) {
-
-  .toggle_icon a button div {
-    display: inline-block;
-  }
-  
-  }
 
 @font-face {
   font-family: "micon"; /* Project id 2832292 */
@@ -1153,87 +1141,13 @@ img {
 }
 
 
-.site-banner__actions {
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  flex-direction: row;
-  margin-top: 15px;
-  justify-content: center;
-  gap: 20px;
-}
 
 
 
 
 
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-.site-banner .site-banner__info .site-banner__actions .site-banner__link {
-  --btn-padding: 9px 30px;
-}
-}
-.site-banner__link {
-  text-decoration: none;
-}
-@media screen and (min-width: 721px) and (min-width: 1441px) and (max-width: 1920px) {
-.mi-btn.mi-btn--link-default {
-  --link-font-size: 1.25vw;
-}}
-@media  (min-width: 721px) {
-  
-#top-banners .site-banner__actions {
-      align-items: center;
-
-      justify-content: left;
-  
-  }
-}
 
 
-
-@media screen and (min-width: 1441px) and (max-width: 1920px) {
-
-.site-banner .site-banner__info .site-banner__actions .site-banner__link {
-  text-decoration: none;
-}}
-
-
-.cta-button-outline {
-  border: 1px solid black;
-  color: rgb(0, 0, 0);
-  padding: 7px 21px;
-  border-radius: 10px;
-}
-
-
-.cta-button-simple {
-  border: 0;
-  color: rgb(0, 0, 0);
-  padding: 7px 21px;
-  font-size: 16px;
-}
-
-.micon-link-arrow {
-  margin-left: 0px;
-  display: inline-block;
-  font-size: 16px;
-}
-
-#top-banners i {
-  display:none;
-}
-
-
-@media  (min-width:720px) {
-  .cta-button-outline {
-      border: none;
-  
-  }
-
-  #top-banners i {
-      display: inline-block;
-  }
-}
 
 /* About CSS */
 .background-text-images {
@@ -1244,4 +1158,146 @@ img {
   background-image: url("../src/assets/about/service-background-text.svg");
   width: 100%;
   height: auto;
+}
+
+/*CSS TO TOGGLE BUTTON ICON */
+
+.toggle_icon a button div {
+  display: none;
+}
+
+@media (min-width: 720px) {
+
+  .toggle_icon a button div {
+    display: inline-block;
+  }
+  
+  }
+
+  /*Account header*/
+
+#about-top-nav{
+  flex: 1;
+  text-align: right;
+}
+#about-top-nav ul{
+  display: inline-block;
+ 
+}
+#about-top-nav ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+/*-------media-query-for-max-width-800---------*/
+
+
+@media only screen and (max-width: 800px) {
+
+  
+#about-top-nav ul{
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: 1s;
+  max-height: 0;
+  transition:max-height 0.5s;
+  }
+  
+  #about-top-nav ul li{
+  display: block;
+  margin-right: 50px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  }
+
+  
+
+
+}
+
+
+
+
+
+/*-------Form--------*/
+
+.form-container {
+  box-shadow: 0 0 20px 0px rgb(222, 216, 216);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#form-switch  span{
+  padding: 0 10px;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+
+#indicator{
+  transform: translateX(100px);
+  transition: transform 1s; 
+}
+
+#account-form  form{
+  max-width: 400px;
+  padding: 0 20px;
+  position: absolute;
+
+  transition: transform 1s;
+}
+
+
+#account-form button {
+  font-size: 18px;
+  font-weight: 400;
+  height: 60px;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+select{
+  border: 1px solid #ff523b;
+  padding: 5px;
+}
+select:focus{
+  outline: none;
+}
+
+
+#list ul li {
+  padding-bottom: 10px;
+}
+
+#RegForm button {
+  margin-top: 20px;
+}
+
+input {
+  border: 1px solid rgb(213, 213, 213);
+  background:rgb(226, 226, 226);
+  color:#8a8686
+
+}
+
+#google-button, input {
+  box-shadow: 0 0 10px 0px rgb(199, 199, 199);
+}
+
+button, input {
+  border-radius: 10px;
 }
