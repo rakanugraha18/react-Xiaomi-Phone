@@ -1,9 +1,7 @@
-import React from 'react'
+import LayoutError from "../components/organism/LayoutError";
 
-const Error = () => {
-  return (
-    <div>Error Page Here</div>
-  )
-}
+const ErrorPage = () => {
+  return <LayoutError></LayoutError>;
+};
 
-export default Error
+export default ErrorPage;
