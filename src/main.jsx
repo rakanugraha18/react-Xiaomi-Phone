@@ -15,6 +15,7 @@ import Agreement from "./pages/Agreement.jsx";
 import Leadership from "./pages/Leadership.jsx";
 import Privacy from "./pages/Privacy.jsx";
 import PocoList from "./components/molecule/Smartphone/PocoList.jsx";
+import XiaomiPro from "./pages/XiaomiPro.jsx";
 
 {
   /*IMPORTANT: Other routes must go above error route */
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
       { path: "/Leadership", element: <Leadership /> },
       { path: "/Privacy", element: <Privacy /> },
       { path: "/PocoList", element: <PocoList /> },
+      { path: "/xiaomi", element: <XiaomiPro /> },
     ],
   },
 ]);
