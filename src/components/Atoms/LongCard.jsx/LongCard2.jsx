@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-const ShortCard = (props) => {
+const LongCard2 = (props) => {
   const {
     Title,
     Specs,
@@ -13,7 +12,7 @@ const ShortCard = (props) => {
   return (
     <>
       <div
-        className={`flex flex-col bg-[#ffffff] items-center font-inter pt-10 px-5 text-center gap-2 ${classname} md:hover:shadow-lg md:hover:ease-out md:duration-[250ms]" onClick="window.location.href = '/product/#'`}
+        className={`flex flex-col bg-[#ffffff] items-center font-inter pt-10 px-5 md:relative text-center gap-2 ${classname} md:hover:shadow-lg md:hover:ease-out md:duration-[250ms]" onClick="window.location.href = '/product/#'`}
       >
         <div className="font-semibold text-[19px] leading-[24px] md:text-[36px] md:leading-[45px]">
           {Title}
@@ -22,21 +21,21 @@ const ShortCard = (props) => {
           {Specs}
         </div>
         <div className="font-normal text-[12px] leading-[17px] text-[#ff6900] border border-[#ff6900] bg-[#FFF0E5] rounded px-1 md:left-4 md:top-4 md:absolute">
-          {Discount}
+          Diskon {Discount}%
         </div>
         <div className="flex gap-2 flex-col md:flex md:flex-row md:items-center">
           <div className="font-normal text-[14px] leading-[18px] md:text-[21px] md:leading-[26px] xl:text-[18px] xl:leading-[20px]">
-            Mulai dari Rp {StartingPrice}
+            Mulai dari Rp&nbsp;{StartingPrice}
           </div>
           <div className="font-normal text-[12px] leading-[15px] text-[#999999] line-through md:text-[15px] md:leading-[19px]">
             {PreviousPrice}
           </div>
         </div>
         <div className={`${Button}`}>
-          <button className="hidden md:bg-[#191919] md:hover:bg-[#444444] md:text-white md:rounded-lg md:p-2 md:px-5 md:text-[18px] md:leading-[22px]">
+          <button className="md:bg-[#191919] p-6 text-[#ff6900] hover:underline md:hover:bg-[#444444] md:text-white md:rounded-lg md:p-2 md:px-5 md:text-[18px] md:leading-[22px]">
             Beli Sekarang
           </button>
-          <button className="hidden md:text-[18px] md:leading-[22px] md:border md:border-black md:rounded-lg md:p-2 md:px-5">
+          <button className="md:text-[18px] md:leading-[22px] md:border md:border-black md:rounded-lg md:p-2 md:px-5">
             Learn More
           </button>
         </div>
@@ -52,4 +51,4 @@ const ShortCard = (props) => {
   );
 };
 
-export default ShortCard;
+export default LongCard2;
