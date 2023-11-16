@@ -1344,3 +1344,7 @@ select:focus{
   text-transform: none;
   vertical-align: -0.125em;
 }
+
+.checkbox-custom {
+  transform: scale(1.5); 
+}
