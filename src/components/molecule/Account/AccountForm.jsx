@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import FB from '/account/facebook-svgrepo-com.png'
+import QrButton from '../../Atoms/Account/QrButton';
 
 const TabbedInterface = () => {
   const [activeTab, setActiveTab] = useState('login');
@@ -11,7 +12,8 @@ const TabbedInterface = () => {
   };
 
   return (
-    <div id='account-form' className="container px-[50px] py-8 border mx-auto mt-[-50px]">
+    <div id='account-form' className="mi-layout__card container px-[50px] py-8 border mx-auto mt-[-50px]">
+      <QrButton/>
       <ul className="flex">
         <li
           onClick={() => handleTabClick('login')}
