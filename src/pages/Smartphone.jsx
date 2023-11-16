@@ -1,6 +1,6 @@
 import RedmiSection from "../components/molecule/Smartphone/RedmiSection";
 import XiaomiSection from "../components/molecule/Smartphone/XiaomiSection";
-import PocoSection from "../components/molecule/Smartphone/PocoSection";
+import PocoSection from "../components/organism/Products/PocoSection";
 import TitleSeeAll from "../components/Atoms/BannerSeeAll/TitleSeeAll";
 import CustomButton from "../components/Atoms/WithCVA/CustomButton";
 
@@ -16,9 +16,12 @@ const SmartPhone = () => {
       <div className="flex justify-center items-center pb-6">
         <CustomButton
           to="/PocoList"
-          text="Lihat Semua Tipe"
-          intent="dark"
-          rounded="yes"
+          text="Lihat semua tipe"
+          order="text_first"
+          icon=">"
+          intent="accent_nobg"
+          hover="bg_soft"
+          media="mediumDark"
         />
       </div>
       <PocoSection />

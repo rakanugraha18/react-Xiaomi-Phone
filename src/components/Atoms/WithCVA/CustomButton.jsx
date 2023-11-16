@@ -21,6 +21,7 @@ const Variants = cva(
         dark_nobg: "bg-transparent text-black",
         accent_bg: "bg-[#ff6900] text-white",
         accent_nobg: "bg-transparent text-[#ff6900]",
+        white_nobg: "bg-transparent text-white",
       },
       border: {
         no: "border-none",
@@ -33,6 +34,7 @@ const Variants = cva(
         no: "hover:none",
         underline: "md:hover:underline",
         bg: "hover:bg-[#333]",
+        bg_soft: ["hover:opacity-80"],
       },
 
       /* button roundness */
@@ -43,6 +45,23 @@ const Variants = cva(
       order: {
         text_first: "flex-row-reverse",
         icon_first: "flex-row",
+      },
+      media: {
+        small: ["sm:border-none", "sm:bg-transparent", "sm:text-[#ff6900]"],
+        mediumDark: [
+          "md:text-white",
+          "md:bg-[#191919]",
+          "md:rounded-lg",
+          "md:border md:border-[#191919]",
+        ],
+        mediumLight: [
+          "md:bg-white",
+          "md:text-[#191919]",
+          "md:rounded-lg",
+          "md:border",
+          "md:border-black",
+        ],
+        large: ["border-none", "bg-transparent", "text-[#ff6900]"],
       },
     },
   }
@@ -59,8 +78,9 @@ const CustomButton = ({
   icon,
   order,
   size,
+  media,
 }) => {
-  const variants = { intent, border, hover, rounded, icon, order, size };
+  const variants = { intent, border, hover, rounded, icon, order, size, media };
 
   return (
     <Link to={to}>

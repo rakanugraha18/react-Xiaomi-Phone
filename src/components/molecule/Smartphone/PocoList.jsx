@@ -1,5 +1,5 @@
 import React from "react";
-import PocoSection from "./PocoSection";
+import PocoSection from "../../organism/Products/PocoSection";
 import TitleSeeAll from "../../Atoms/BannerSeeAll/TitleSeeAll";
 
 function PocoList() {
