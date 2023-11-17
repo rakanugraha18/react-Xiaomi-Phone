@@ -1,11 +1,10 @@
-@import './theme.css'; /*color variariables for dynamic theme*/
-@import './micon.css'; /*Xiaomi icons font*/
+@import "./theme.css"; /*color variariables for dynamic theme*/
+@import "./micon.css"; /*Xiaomi icons font*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   text-decoration: none;
   list-style: none;
   padding: 0;
@@ -14,10 +13,9 @@
 }
 
 body {
-
   font-family: "Inter", sans-serif;
+  background-color: #f7f7f7;
 }
-
 
 /* NAVBAR CSS START
 -----------------------
@@ -53,21 +51,20 @@ body {
   transform: translateX(0px);
 }
 
-
 /* Nav links*/
 
 .link-border {
   border-bottom: 3px solid #00000000;
   border-top: 3px solid #0000;
   box-sizing: border-box;
-  transition: border .2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 
 .link-border:hover {
   border-bottom: 3px solid #ff6900;
   border-top: 3px solid #0000;
   box-sizing: border-box;
-  transition: border .2s ease-in-out;
+  transition: border 0.2s ease-in-out;
 }
 
 .shortcut__item--wrapper {
@@ -91,41 +88,34 @@ body {
 
 @media (min-width: 768px) {
   .only-medium {
-      display: flex;
+    display: flex;
   }
 
   .only-phone {
-      display: none;
+    display: none;
   }
-
 }
 
 /*LG*/
 
 @media (min-width: 1025px) {
-
-
-
   .navigation__logo {
-      height: 28px;
-      padding: 0 16px;
-      width: 28px;
+    height: 28px;
+    padding: 0 16px;
+    width: 28px;
   }
 
-.shortcut__icon {
-      font-size: 20px;
+  .shortcut__icon {
+    font-size: 20px;
   }
 }
-
 
 /*XL*/
 
 @media (min-width: 1440px) {
-
- .shortcut__icon {
-      font-size: 28px;
+  .shortcut__icon {
+    font-size: 28px;
   }
-
 }
 
 /* NAVBAR CSS END
@@ -171,14 +161,11 @@ body {
   word-break: keep-all;
 }
 
-
-@media (min-width: 1024px){
-   .site-banner__price {
-  font-size: 36px;
-  margin-top: 3.125vw;
-
-}
-
+@media (min-width: 1024px) {
+  .site-banner__price {
+    font-size: 36px;
+    margin-top: 3.125vw;
+  }
 }
 .site-banner__price strong {
   font-weight: 700;
@@ -192,7 +179,6 @@ body {
 
 /* HOME CSS END */
 
-
 /* CART CSS SART */
 .nav-checkout-step {
   align-items: center;
@@ -202,13 +188,12 @@ body {
   position: relative;
 }
 
-.first~.nav-checkout-step {
+.first ~ .nav-checkout-step {
   color: #d0d0d0;
   border-color: #d0d0d0;
-
 }
 
-.first~.nav-checkout-step:before {
+.first ~ .nav-checkout-step:before {
   content: "";
   background-color: #d0d0d0;
   height: 1px;
@@ -218,29 +203,22 @@ body {
 }
 
 @media (min-width: 768px) {
-
-  .first~.nav-checkout-step:before {
-      width: 57px;
+  .first ~ .nav-checkout-step:before {
+    width: 57px;
   }
 }
 
 @media (min-width: 1024px) {
-
-  .first~.nav-checkout-step:before {
-      width: 157px;
+  .first ~ .nav-checkout-step:before {
+    width: 157px;
   }
 }
-
 
 @media (min-width: 1280px) {
-
-  .first~.nav-checkout-step:before {
-      width: 257px;
+  .first ~ .nav-checkout-step:before {
+    width: 257px;
   }
-
-
 }
-
 
 .nav-checkout-number {
   align-items: center;
@@ -254,13 +232,11 @@ body {
   margin-right: 8px;
 }
 
-.first~.nav-checkout-number {
+.first ~ .nav-checkout-number {
   color: #d0d0d0;
 }
 
-
 /* CART CSS END */
-
 
 /* ABOUT CSS START */
 .background-text-images {
@@ -274,68 +250,51 @@ body {
 }
 /* ABOUT CSS END */
 
-
-
-
-
 /* ACCOUNT CSS START */
-  
+
 /*Account header*/
 
-#account-top-nav{
+#account-top-nav {
   flex: 1;
   text-align: right;
 }
-#account-top-nav ul{
+#account-top-nav ul {
   display: inline-block;
- 
 }
-#account-top-nav ul li{
+#account-top-nav ul li {
   display: inline-block;
   margin-right: 20px;
 }
 
-
 /*-------media-query-for-max-width-800---------*/
 
-
 @media only screen and (max-width: 800px) {
-#about-top-nav ul{
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  transition: 1s;
-  max-height: 0;
-  transition:max-height 0.5s;
-  }
-  
-  #about-top-nav ul li{
-  display: block;
-  margin-right: 50px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  #about-top-nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    max-height: 0;
+    transition: max-height 0.5s;
   }
 
-  
-
-
+  #about-top-nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
 }
 
-
-
-
-
 /*-------Form--------*/
-
-
 
 #account-form button {
   font-size: 18px;
   font-weight: 400;
   height: 60px;
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   vertical-align: middle;
   white-space: nowrap;
   margin-top: 0px;
@@ -343,14 +302,13 @@ body {
   color: #fff;
 }
 
-select{
+select {
   border: 1px solid #ff523b;
   padding: 5px;
 }
-select:focus{
+select:focus {
   outline: none;
 }
-
 
 #list ul li {
   padding-bottom: 10px;
@@ -358,19 +316,19 @@ select:focus{
 
 .accountinput {
   border: 1px solid rgb(213, 213, 213);
-  background:rgb(226, 226, 226);
-  color:#8a8686
-
+  background: rgb(226, 226, 226);
+  color: #8a8686;
 }
 
-#google-button, .accountinput {
+#google-button,
+.accountinput {
   box-shadow: 0 0 5px 0px rgb(199, 199, 199);
 }
 
 .mi-layout__card {
   text-align: left;
   border-radius: 4px;
-  box-shadow: 0 20px 50px 0 hsla(0,0%,64%,.1);
+  box-shadow: 0 20px 50px 0 hsla(0, 0%, 64%, 0.1);
   margin: 0 auto 80px;
   padding: 40px 45px;
   box-sizing: border-box;
@@ -379,7 +337,6 @@ select:focus{
   overflow: hidden;
   position: relative;
 }
-
 
 .qr-switch-wrap {
   outline: 1px solid transparent;
@@ -400,8 +357,8 @@ select:focus{
 
 .mi-qr-account-switch {
   height: 64px;
-  opacity: .4;
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  opacity: 0.4;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 64px;
   z-index: 1000;
 }
@@ -409,16 +366,16 @@ select:focus{
 .qr-account-switch:hover {
   height: 64px;
   opacity: 1;
-  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 64px;
   z-index: 1000;
 }
 
-
 .qr-account-icon {
   font-size: 36px;
   position: absolute;
-  top: -22px; right: -22px;  
+  top: -22px;
+  right: -22px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -434,7 +391,7 @@ select:focus{
 }
 
 .checkbox-custom {
-  transform: scale(1.5); 
+  transform: scale(1.5);
 }
 
 /* ACCOUNT CSS END */
@@ -446,9 +403,7 @@ select:focus{
 }
 
 @media (min-width: 720px) {
-
   .toggle_icon a button div {
     display: inline-block;
   }
-  
-  }
+}

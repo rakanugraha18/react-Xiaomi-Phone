@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, redirect } from "react-router-dom";
-// import styles from "../style/about.css";
+// import "../../../style/about.css";
 
 export default function TabButton(props) {
   const { text, redirect } = props;
