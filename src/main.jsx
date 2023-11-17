@@ -23,7 +23,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Error />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/store", element: <Store /> },
@@ -36,6 +35,7 @@ const router = createBrowserRouter([
       { path: "/Privacy", element: <Privacy /> },
       { path: "/PocoList", element: <PocoList /> },
       { path: "/xiaomi", element: <XiaomiPro /> },
+      { path: "*", element: <Error /> }
     ],
   },
 ]);
