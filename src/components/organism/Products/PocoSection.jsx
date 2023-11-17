@@ -7,8 +7,8 @@ export default function PocoSection() {
     <>
       {/* Banner Flagship */}
       <BannerCard />
-      {/* Large Card */}
-      <section className="flex flex-wrap">
+      <section className="flex flex-wrap bg-[#F7F7F7]">
+        {/* Large Card */}
         <LargeCard />
         {/* Small Card Start */}
         <SmallCard />
