@@ -1,43 +1,74 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-const getSystemTheme = (mediaQuery) => {
-  const prefersDarkMode = window.matchMedia(mediaQuery).matches;
-  return prefersDarkMode ? "dark" : "light";
+const getSystemTheme = (mediaQuery) =>
+  window.matchMedia(mediaQuery).matches ? "dark" : "light";
+
+const getInitialTheme = () => {
+  const activeTheme = localStorage.getItem("theme");
+  return activeTheme && (activeTheme === "dark" || activeTheme === "light")
+    ? activeTheme
+    : getSystemTheme("(prefers-color-scheme: dark)");
 };
 
 const DynamicThemeContext = createContext();
 
 export const DynamicThemeProvider = ({ children }) => {
-  const prefersDarkModeMediaQuery = "(prefers-color-scheme: dark)";
-  const [theme, setTheme] = useState("");
+  const [theme, setThemeState] = useState(() => getInitialTheme());
 
-  const setThemeFromMediaQuery = () => {
-    const newTheme = getSystemTheme(prefersDarkModeMediaQuery);
-    setTheme(newTheme);
+  const setTheme = (newTheme, source) => {
+    if (theme !== newTheme) {
+      localStorage.setItem("theme", newTheme);
+      console.log(`Updated active theme from ${source}:`, newTheme);
+    }
+
+    setThemeState(newTheme);
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
-  useEffect(() => {
-    const mediaQueryList = window.matchMedia(prefersDarkModeMediaQuery);
-
-    const handleMediaQueryChange = () => {
-      setThemeFromMediaQuery();
-    };
-
-    setThemeFromMediaQuery();
-    mediaQueryList.addEventListener("change", handleMediaQueryChange);
-
-    return () => {
-      mediaQueryList.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
-
-  const setThemeFromSwitch = (selectedTheme) => {
-    setTheme(selectedTheme);
-    document.documentElement.setAttribute("data-theme", selectedTheme);
+  const changeTheme = (selectedTheme, source) => {
+    console.log(`Setting theme from ${source}:`, selectedTheme);
+    setTheme(selectedTheme, source);
   };
 
-  const contextValue = { theme, setThemeFromSwitch };
+  const setThemeFromSwitch = (selectedTheme) =>
+    changeTheme(selectedTheme, "switch");
+  const setThemeFromSystem = () =>
+    changeTheme(
+      getSystemTheme("(prefers-color-scheme: dark)"),
+      "system preference"
+    );
+
+  useEffect(() => {
+    changeTheme(getInitialTheme(), "available theme");
+    const systemPreferenceListener = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    );
+
+    const handleSystemPreferenceChange = () => {
+      console.log("System preference change detected. Updating theme...");
+      console.log(
+        "New system preference value:",
+        systemPreferenceListener.matches
+      );
+      changeTheme(
+        getSystemTheme("(prefers-color-scheme: dark)"),
+        "user device"
+      );
+    };
+
+    systemPreferenceListener.addEventListener(
+      "change",
+      handleSystemPreferenceChange
+    );
+
+    return () => {
+      systemPreferenceListener.removeEventListener(
+        "change",
+        handleSystemPreferenceChange
+      );
+    };
+  }, []);
+  const contextValue = { theme, setThemeFromSwitch, setThemeFromSystem };
 
   return (
     <DynamicThemeContext.Provider value={contextValue}>
@@ -48,11 +79,5 @@ export const DynamicThemeProvider = ({ children }) => {
 
 export const useDynamicTheme = () => {
   const context = useContext(DynamicThemeContext);
-  if (!context) {
-    throw new Error(
-      "useDynamicTheme must be used within a DynamicThemeProvider"
-    );
-  }
   return context;
 };
-
