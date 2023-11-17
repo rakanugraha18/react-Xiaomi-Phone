@@ -1,7 +1,7 @@
 import Icon from "../../Atoms/Icon";
 import Logo from "../../Atoms/Logo";
 import List from "../../Atoms/Navbar/List";
-import SearchButton from "../../Atoms/SearchButton";
+import SearchButton from "../../molecule/NavBar/SearchButton";
 
 const NavBar = () => {
   return (
@@ -10,30 +10,18 @@ const NavBar = () => {
       className=" bg-[#fff] px-5 lg:px-6 sticky h-[48px] xl:h-[56px] "
       role="banner"
     >
-      <nav id="header-navigation" className="h-full ">
+      <nav className="h-full w-full flex mx-auto items-center justify-between">
+        <ul className="flex w-full h-full items-center">
         <Logo />
-        <List redirect="/store" text="Store" title="Store"></List>
-        <List
-          redirect="/smartphone"
-          text="SmartPhone"
-          isActive="active"
-          title="SmartPhone"
-        ></List>
-        <List separator="navigation__separator"></List>
-        <List redirect="#" text="Discover" title="Discover"></List>
-        <List redirect="#" text="Support" title="Support"></List>
-        <SearchButton />
-        <Icon redirect="/cart" classname="shopping-cart"></Icon>
-        <li class="navigation__item shortcut__item shortcut__item-user only-medium">
-                        <div class="navigation__link" role="button" tabindex="0">
-                            <div class="shortcut__item--wrapper">
-                                <a href="/account">
-                                    <i class="micon micon-account shortcut__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-      </nav>
+        <List redirect="/store" text="Store" title="Store"/>
+        <List redirect="/smartphone" text="SmartPhone" isActive="active" title="SmartPhone"/>
+        <div className="grow h-full"></div>
+        <List redirect="#" text="Discover" title="Discover"/>
+        <List redirect="#" text="Support" title="Support"/>
+        <SearchButton/>
+        <Icon redirect="/cart" classname="shopping-cart"/>
+        <Icon redirect="/account" classname="account"/>
+      </ul></nav>
     </header>
   );
 };
