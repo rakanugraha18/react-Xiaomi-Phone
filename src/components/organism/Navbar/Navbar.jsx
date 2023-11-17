@@ -2,6 +2,7 @@ import Icon from "../../Atoms/Icon";
 import Logo from "../../Atoms/Logo";
 import List from "../../Atoms/Header/List";
 import SearchButton from "../../molecule/Search/SearchButton";
+import ThemeSwitch from "../../molecule/ThemeSwitch";
 
 const Navbar = () => {
   return (
@@ -19,6 +20,7 @@ const Navbar = () => {
         <div className="only-medium">
         <Icon redirect="/account" classname="account"/>
         </div>
+        <ThemeSwitch/>
       </ul></nav>
   );
 };

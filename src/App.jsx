@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { CartProvider } from "./context/CartProvider";
 import Header from "./components/organism/Header/Header";
 import Footer from "./components/organism/Footer";
-import CustomThemeProvider from "./context/CustomThemeProvider";
+import CustomThemeWrapper from "./context/CustomThemeWrapper";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <CustomThemeProvider>
+      <CustomThemeWrapper>
         <CartProvider>
           {showHeader && <Header />}
           <main>
@@ -24,7 +24,7 @@ function App() {
           </main>
           {showFooter && <Footer />}
         </CartProvider>
-      </CustomThemeProvider>
+      </CustomThemeWrapper>
     </>
   );
 }

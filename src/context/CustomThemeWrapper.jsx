@@ -1,8 +1,8 @@
 import React from 'react';
 import { DynamicThemeProvider } from './DynamicThemeContext';
 
-const CustomThemeProvider = ({ children }) => {
+const CustomThemeWrapper = ({ children }) => {
   return <DynamicThemeProvider>{children}</DynamicThemeProvider>;
 };
 
-export default CustomThemeProvider;
+export default CustomThemeWrapper;
