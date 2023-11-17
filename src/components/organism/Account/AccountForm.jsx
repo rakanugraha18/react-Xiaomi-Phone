@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import FB from '/account/facebook-svgrepo-com.png'
 import QrButton from '../../Atoms/Account/QrButton';
-import CountrySelector from './CountrySelector'
+import CountrySelector from '../../Atoms/Account/CountrySelector'
 
 
 const TabbedInterface = () => {
@@ -13,14 +13,6 @@ const TabbedInterface = () => {
     setActiveTab(tab);
   };
 
-  const options = ["Option 1", "Option 2", "Option 3"];
-
-  const [selectedOption, setSelectedOption] = useState('');
-
-  const handleSelectChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
-
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -28,12 +20,12 @@ const TabbedInterface = () => {
   };
 
   return (
-    <div id='account-form' className="mi-layout__card container px-[100px] py-8 border mx-auto mt-[-50px]">
+    <div id='account-form' className="mi-layout__card bg-formBackground container px-[100px] py-8 border mx-auto mt-[-50px]">
       <QrButton />
       <ul className="flex">
         <li
           onClick={() => handleTabClick('login')}
-          className={`cursor-pointer px-4 py-2 ${activeTab === 'login' ? ' text-black' : 'text-gray-300'
+          className={`cursor-pointer px-4 py-2 ${activeTab === 'login' ? ' text-text' : 'text-gray-300'
             }`}
         >
 
@@ -42,7 +34,7 @@ const TabbedInterface = () => {
         </li>
         <li
           onClick={() => handleTabClick('register')}
-          className={`cursor-pointer px-4 py-2 ${activeTab === 'register' ? 'text-black' : 'text-gray-300'
+          className={`cursor-pointer px-4 py-2 ${activeTab === 'register' ? 'text-text' : 'text-gray-300'
             }`}
         >
           Daftar
@@ -53,7 +45,7 @@ const TabbedInterface = () => {
         {activeTab === 'login' && (
           <div>
             {/* Login form */}
-            <form>
+            <form className='bg-formBackground'>
               <div className='flex flex-col space-y-5'>
                 <input type="email" placeholder="Email"
                   className="border w-full h-[30px] mt-[10px] mb-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
@@ -69,10 +61,10 @@ const TabbedInterface = () => {
                     Google</span>
                 </button></div>
 
-              <a className="block" href="">Lupa Sandi?</a>
+              <a className="block text-accent" href="">Lupa Sandi?</a>
 
               <div>
-                <div className="text-center text-[17px] leading-[40px]">Pilihan lainnya</div>
+                <div className="text-center text-[#797979] text-[17px] leading-[40px]">Pilihan lainnya</div>
                 <div className="m-[10px] flex justify-center"><img className="w-[70px] h-[70px] "
                   src={FB} alt="" /></div>
               </div>
@@ -82,7 +74,7 @@ const TabbedInterface = () => {
 
         {activeTab === 'register' && (
           <div>
-            {/* Registration form goes here */}
+            {/* Registration form */}
             <form>
             <CountrySelector/>
 
@@ -92,7 +84,7 @@ const TabbedInterface = () => {
                 className="border w-full h-[30px] mt-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
               <input type="password" placeholder="Masukan sandi Anda lagi"
                 className="border w-full h-[30px] mt-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
-              <p className="text-[13px] text-[#333] leading-tight">Sandi harus terdiri dari 8-16 karakter dan
+              <p className="text-[13px] text-text leading-tight">Sandi harus terdiri dari 8-16 karakter dan
                 mencakup angka dan huruf</p>
               <div>
                 <div className='flex items-start space-x-1 py-4'>
