@@ -32,7 +32,12 @@ export const DynamicThemeProvider = ({ children }) => {
     };
   }, []);
 
-  const contextValue = { theme, setTheme };
+  const setThemeFromSwitch = (selectedTheme) => {
+    setTheme(selectedTheme);
+    document.documentElement.setAttribute("data-theme", selectedTheme);
+  };
+
+  const contextValue = { theme, setThemeFromSwitch };
 
   return (
     <DynamicThemeContext.Provider value={contextValue}>
@@ -50,3 +55,4 @@ export const useDynamicTheme = () => {
   }
   return context;
 };
+
