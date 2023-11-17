@@ -163,27 +163,27 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="w-auto flex flex-col justify-start md:flex-row-reverse ">
-          <div class="flex w-full flex-col justify-start md:flex-row md:justify-between md:items-center">
-            <div class="w-fit">
+        <div className="w-auto flex flex-col justify-start md:flex-row-reverse ">
+          <div className="flex w-full flex-col justify-start md:flex-row md:justify-between md:items-center">
+            <div className="w-fit">
               <a
                 href="//www.mi.co.id/id/sitemap/"
                 target="_blank"
-                class="text-white flex items-center">
+                className="text-white flex items-center">
                 Peta Situs
               </a>
             </div>
-            <div class="w-fit">
+            <div className="w-fit">
               <a
                 href="//www.mi.co.id/id/select-location/"
-                class="text-white flex items-center">
+                className="text-white flex items-center">
                 Indonesia / Indonesia
-                <i class="micon micon-language-earth locale__icon text-md ml-[10px] text-white"></i>
+                <i className="micon micon-language-earth locale__icon text-md ml-[10px] text-white"></i>
               </a>
             </div>
           </div>
-          <div class="flex w-full justify-left gap-5 lg:min-w-fit lg:w-max md:px-5 items-center border-t-2 border-white md:border-0">
-            <p class="text-white">
+          <div className="flex w-full justify-left gap-5 lg:min-w-fit lg:w-max md:px-5 items-center border-t-2 border-white md:border-0">
+            <p className="text-white">
               Copyright © 2010 - 2023 Xiaomi. All Rights Reserved
             </p>
           </div>

@@ -5,25 +5,25 @@ const RedmiBanner = () => {
   return (
     <section
       id="latest_redmi"
-      class="relative flex flex-col bg-white text-black bg-cover bg-center h-[500px] lg:h-[600px]"
+      className="relative flex flex-col bg-white text-black bg-cover bg-center h-[500px] lg:h-[600px]"
     >
       <div
         id="site-banner"
         className="relative flex justify-center items-start h-full max-h-full min-h-auto overflow-hidden"
       >
         <picture
-          class="responsive-image flex h-full overflow-hidden absolute w-full z-1"
+          className="responsive-image flex h-full overflow-hidden absolute w-full z-1"
         >
           <source
             media="(max-width: 720px)"
             type="image/jpeg"
-            srcset="//i02.appmifile.com/339_operator_id/28/08/2023/cb75293af8447ff973b3028e0e963a43.jpg"
+            srcSet="//i02.appmifile.com/339_operator_id/28/08/2023/cb75293af8447ff973b3028e0e963a43.jpg"
           />
 
           <source
             media="(min-width: 720px) and (max-width: 1024px)"
             type="image/jpeg"
-            srcset="//i02.appmifile.com/234_operator_id/28/08/2023/5ff4c5eefe09aef79ac1275be40131e6.jpg"
+            srcSet="//i02.appmifile.com/234_operator_id/28/08/2023/5ff4c5eefe09aef79ac1275be40131e6.jpg"
           />
 
           <img

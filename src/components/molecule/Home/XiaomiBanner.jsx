@@ -5,29 +5,29 @@ const XiaomiBanner = () => {
   return (
     <section
       id="latest_xiaomi"
-      class="relative flex flex-col bg-white text-white bg-cover bg-center h-[450px] lg:h-[600px]"
+      className="relative flex flex-col bg-white text-white bg-cover bg-center h-[450px] lg:h-[600px]"
     >
       <div
         id="site-banner"
         className="relative flex justify-center items-start h-full max-h-full min-h-auto overflow-hidden text-white"
         data-ot-expose='{"event":"view_promotion","tip":{"c":"13982-1|1-banner-event"},"link":"https://www.mi.co.id/id/product/xiaomi-13t-leica/","elementName":"Buy Now","elementTitle":"Xiaomi 13T"}'
         role="button"
-        tabindex="-1"
+        tabIndex="-1"
       >
         <picture
-          class="responsive-image flex h-full overflow-hidden absolute w-full z-1"
+          className="responsive-image flex h-full overflow-hidden absolute w-full z-1"
           fmp-c="4"
         >
           <source
             media="(max-width: 720px)"
             type="image/jpeg"
-            srcset="//i02.appmifile.com/298_operator_id/03/10/2023/f495255ebd34286602b86fa19fab9026.jpg"
+            srcSet="//i02.appmifile.com/298_operator_id/03/10/2023/f495255ebd34286602b86fa19fab9026.jpg"
           />
 
           <source
             media="(min-width: 720px) and (max-width: 1024px)"
             type="image/jpeg"
-            srcset="//i02.appmifile.com/763_operator_id/03/10/2023/afbc2aa703f8c09dfcb460a37e88bada.jpg"
+            srcSet="//i02.appmifile.com/763_operator_id/03/10/2023/afbc2aa703f8c09dfcb460a37e88bada.jpg"
           />
 
           <img
