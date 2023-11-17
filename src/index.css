@@ -19,7 +19,7 @@ body {
 }
 
 
-/* NAVBAR
+/* NAVBAR CSS START
 -----------------------
 */
 
@@ -27,15 +27,6 @@ body {
   box-shadow: 0 6px 16px 0 #1919190f;
   top: 0;
   z-index: 20;
-}
-
-
-#header-navigation {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
 }
 
 /* MI - HOME LOGO */
@@ -63,52 +54,28 @@ body {
 }
 
 
-/*Group links*/
+/* Nav links*/
 
-.navigation__group {
-  display: flex;
-  height: inherit;
-}
-
-.navigation__separator {
-  flex-grow: 1;
-}
-
-.navigation__item {
-  color: #191919;
-  height: inherit;
-}
-
-
-.navigation__item .navigation__link {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  font-size: 16px;
-  height: 100%;
-  padding: 0 8px;
-}
-
-.navigation__item .link-border {
+.link-border {
   border-bottom: 3px solid #00000000;
   border-top: 3px solid #0000;
   box-sizing: border-box;
   transition: border .2s ease-in-out;
 }
 
-.navigation__item .link-border:hover {
+.link-border:hover {
   border-bottom: 3px solid #ff6900;
   border-top: 3px solid #0000;
   box-sizing: border-box;
   transition: border .2s ease-in-out;
 }
 
-.navigation__shortcut .shortcut__item .shortcut__item--wrapper {
+.shortcut__item--wrapper {
   line-height: 1;
   position: relative;
 }
 
-.navigation__shortcut .shortcut__icon {
+.shortcut__icon {
   font-size: 18px;
 }
 
@@ -123,10 +90,6 @@ body {
 /*MD*/
 
 @media (min-width: 768px) {
-  .navigation__item {
-      margin: 0 8px;
-  }
-
   .only-medium {
       display: flex;
   }
@@ -141,9 +104,7 @@ body {
 
 @media (min-width: 1025px) {
 
-  #header-navigation {
-      padding: 0 16px;
-  }
+
 
   .navigation__logo {
       height: 28px;
@@ -151,7 +112,7 @@ body {
       width: 28px;
   }
 
-  .navigation__shortcut .shortcut__icon {
+.shortcut__icon {
       font-size: 20px;
   }
 }
@@ -161,16 +122,15 @@ body {
 
 @media (min-width: 1440px) {
 
-  .navigation__item {
-      margin: 0 16px;
-  }
-
-  .navigation__shortcut .shortcut__icon {
+ .shortcut__icon {
       font-size: 28px;
   }
 
 }
 
+/* NAVBAR CSS END
+-----------------------
+*/
 
 /* FOOTER CSS START
 -----------------------
@@ -201,8 +161,6 @@ body {
 /* FOOTER CSS END */
 
 /* HOME CSS START */
-
-
 
 .site-banner__price {
   font-weight: 700;
@@ -235,6 +193,75 @@ body {
 /* HOME CSS END */
 
 
+/* CART CSS SART */
+.nav-checkout-step {
+  align-items: center;
+  color: #d0d0d0;
+  display: flex;
+  font-size: 18px;
+  position: relative;
+}
+
+.first~.nav-checkout-step {
+  color: #d0d0d0;
+  border-color: #d0d0d0;
+
+}
+
+.first~.nav-checkout-step:before {
+  content: "";
+  background-color: #d0d0d0;
+  height: 1px;
+  margin: 0 18px;
+  width: 0;
+  /* Additional pseudo-element styles here, if needed */
+}
+
+@media (min-width: 768px) {
+
+  .first~.nav-checkout-step:before {
+      width: 57px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .first~.nav-checkout-step:before {
+      width: 157px;
+  }
+}
+
+
+@media (min-width: 1280px) {
+
+  .first~.nav-checkout-step:before {
+      width: 257px;
+  }
+
+
+}
+
+
+.nav-checkout-number {
+  align-items: center;
+  border: 2px solid;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+  margin-right: 8px;
+}
+
+.first~.nav-checkout-number {
+  color: #d0d0d0;
+}
+
+
+/* CART CSS END */
+
+
 /* ABOUT CSS START */
 .background-text-images {
   background-image: url("../src/assets/about/service-background-text.svg");
@@ -246,6 +273,8 @@ body {
   height: auto;
 }
 /* ABOUT CSS END */
+
+
 
 
 
@@ -271,8 +300,6 @@ body {
 
 
 @media only screen and (max-width: 800px) {
-
-  
 #about-top-nav ul{
   position: absolute;
   top: 70px;
@@ -342,14 +369,10 @@ select:focus{
 
 .mi-layout__card {
   text-align: left;
-}
- .mi-layout__card {
   border-radius: 4px;
   box-shadow: 0 20px 50px 0 hsla(0,0%,64%,.1);
   margin: 0 auto 80px;
   padding: 40px 45px;
-}
-.mi-layout__card {
   box-sizing: border-box;
   display: inline-block;
   min-width: 450px;
@@ -429,3 +452,6 @@ select:focus{
   }
   
   }
+
+
+
