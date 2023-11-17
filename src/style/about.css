@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
+.tab.active {
   font-weight: normal;
   color: #ff6900;
   border-color: #ff6900;

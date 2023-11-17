@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { CartContext } from "../../../context/cartProvider.jsx";
+import { CartContext } from "../../../context/CartProvider.jsx";
 import CustomButton from "../../Atoms/WithCVA/CustomButton.jsx";
 import TitleCard from "../../Atoms/InsideCard/TitleCard.jsx";
 import ImgCard from "../../Atoms/InsideCard/ImgCard.jsx";
