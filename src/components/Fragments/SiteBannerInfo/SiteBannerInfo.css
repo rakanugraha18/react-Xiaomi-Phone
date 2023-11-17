@@ -1,0 +1,142 @@
+.site-banner__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 500px;
+}
+
+.site-banner__info > * {
+  padding: 0;
+  margin: 0;
+}
+
+.site-banner__title {
+  max-width: 500px;
+  min-width: 250px;
+}
+
+.site-banner__title > img {
+  height: 2.5rem;
+}
+
+.site-banner__subtitle {
+  padding-top: 8px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.site-banner__price {
+  padding-top: 3rem;
+}
+
+.site-banner__price > strong {
+  font-size: 1.8rem;
+}
+
+.site-banner__price > span {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.site-banner__price > strong > small,
+.site-banner__price > del {
+  font-size: 1rem;
+}
+
+.site-banner__price > del {
+  color: grey;
+  margin-left: 0.5rem;
+}
+
+.site-banner__image {
+  width: 40%;
+}
+
+.site-banner__button {
+  margin-top: 8px;
+}
+
+.banner-button {
+  border: none;
+  text-decoration: none;
+  padding: 9px 30px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.site-banner__button .btn-beli-sekarang {
+  background-color: black;
+  color: #ffff;
+  border-radius: 5px;
+}
+
+.site-banner__button .btn-learn-more {
+  background-color: #ffff;
+}
+
+.btn-arrow {
+  border: solid black;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.site-goods {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.site-goods-half {
+  grid-column: span 2;
+  width: auto;
+  background-color: #ffff;
+}
+
+.site-goods-quarter {
+  width: auto;
+  background-color: #ffff;
+}
+
+@media (max-width: 1400px) {
+  .site-banner__info {
+    width: 360px;
+  }
+
+  .site-banner__title {
+    max-width: 350px;
+    min-width: 175px;
+  }
+
+  .site-banner__title > img {
+    height: 1.75rem;
+  }
+
+  .site-banner__subtitle {
+    padding-top: 6px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .site-banner__price {
+    padding-top: 2rem;
+  }
+
+  .site-banner__price > strong {
+    font-size: 1.2rem;
+  }
+
+  .site-banner__price > span {
+    font-size: 1rem;
+  }
+
+  .banner-button {
+    padding: 6.5px 20px;
+    font-size: 0.8rem;
+  }
+}
