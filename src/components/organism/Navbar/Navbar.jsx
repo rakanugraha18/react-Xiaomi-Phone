@@ -1,15 +1,11 @@
 import Icon from "../../Atoms/Icon";
 import Logo from "../../Atoms/Logo";
-import List from "../../Atoms/Navbar/List";
-import SearchButton from "../../molecule/NavBar/SearchButton";
+import List from "../../Atoms/Header/List";
+import SearchButton from "../../molecule/Search/SearchButton";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <header
-      id="top-site-header"
-      className=" bg-[#fff] px-5 lg:px-6 sticky h-[48px] xl:h-[56px] "
-      role="banner"
-    >
+ 
       <nav className="h-full w-full flex mx-auto items-center justify-between">
         <ul className="flex w-full h-full items-center">
         <Logo />
@@ -20,10 +16,11 @@ const NavBar = () => {
         <List redirect="#" text="Support" title="Support"/>
         <SearchButton/>
         <Icon redirect="/cart" classname="shopping-cart"/>
+        <div className="only-medium">
         <Icon redirect="/account" classname="account"/>
+        </div>
       </ul></nav>
-    </header>
   );
 };
 
-export default NavBar;
+export default Navbar;
