@@ -26,7 +26,7 @@ const Account = () => {
             </div>
 
             <div className="hidden md:block w-[50%]">
-              <nav id="about-top-nav">
+              <nav id="account-top-nav">
                 <ul className="text-text">
                   <li>
                     <a href="">Perjanjian Pengguna</a>
