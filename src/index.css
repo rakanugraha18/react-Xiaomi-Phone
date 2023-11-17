@@ -1,3 +1,4 @@
+@import './theme.css'; /*color variariables for dynamic theme*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -995,10 +996,6 @@ body {
 
 /* Home CSS */
 
-body {
-  font-family: 'Inter';
-}
-
 .site-banner.site-banner--light {
 
   color: #191919;
@@ -1258,10 +1255,6 @@ select:focus{
   padding-bottom: 10px;
 }
 
-#RegForm button {
-  margin-top: 20px;
-}
-
 .accountinput {
   border: 1px solid rgb(213, 213, 213);
   background:rgb(226, 226, 226);
@@ -1275,7 +1268,7 @@ select:focus{
 
 
 
- .mi-layout__card {
+.mi-layout__card {
   text-align: left;
 }
  .mi-layout__card {
@@ -1327,15 +1320,12 @@ select:focus{
 }
 
 
-.mi-qr-account-switch__icon {
+.qr-account-icon {
   font-size: 36px;
   position: absolute;
-  top: -22px; right: -22px;
-}
-.qr-account-icon {
+  top: -22px; right: -22px;  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: inherit;
   display: inline-block;
   font-style: normal;
   line-height: 0;
@@ -1343,6 +1333,9 @@ select:focus{
   text-rendering: optimizeLegibility;
   text-transform: none;
   vertical-align: -0.125em;
+}
+.qr-account-icon svg {
+  fill: var(--color-form-background);
 }
 
 .checkbox-custom {

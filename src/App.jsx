@@ -1,7 +1,8 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { CartProvider } from "./context/cartProvider";
-import Footer from "./components/molecule/Footer";
-import NavBar from "./components/molecule/Navbar";
+import Footer from "./components/organism/Footer";
+import NavBar from "./components/organism/NavBar";
+import CustomThemeProvider from "./context/CustomThemeProvider";
 
 function App() {
   // Use the useLocation hook to get the current location
@@ -14,13 +15,15 @@ function App() {
 
   return (
     <>
-      <CartProvider>
-        {showNavBar && <NavBar />}
-        <main>
-          <Outlet />
-        </main>
-        {showFooter && <Footer />}
-      </CartProvider>
+      <CustomThemeProvider>
+        <CartProvider>
+          {showNavBar && <NavBar />}
+          <main>
+            <Outlet />
+          </main>
+          {showFooter && <Footer />}
+        </CartProvider>
+      </CustomThemeProvider>
     </>
   );
 }
