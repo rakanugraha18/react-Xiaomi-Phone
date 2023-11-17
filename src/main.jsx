@@ -17,20 +17,18 @@ import Privacy from "./pages/Privacy.jsx";
 import PocoList from "./components/molecule/Smartphone/PocoList.jsx";
 import XiaomiPro from "./pages/XiaomiPro.jsx";
 
-{
-  /*IMPORTANT: Other routes must go above error route */
-}
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/store", element: <Store /> },
       { path: "/cart", element: <Cart /> },
       { path: "/account", element: <Account /> },
       { path: "/smartphone", element: <SmartPhone /> },
-      { path: "*", element: <Error /> },
       { path: "/About", element: <About /> },
       { path: "/Agreement", element: <Agreement /> },
       { path: "/Leadership", element: <Leadership /> },
