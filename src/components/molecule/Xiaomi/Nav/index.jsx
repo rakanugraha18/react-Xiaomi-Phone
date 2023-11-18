@@ -1,55 +1,165 @@
-const index = () => {
+import React from "react";
+// app component
+function Index() {
   return (
-    <nav
-      id="header"
-      className="h-20 flex items-center justify-center font-inter"
-    >
-      <div className="relative group">
-        <button
-          id="dropdown-button"
-          className="inline-flex justify-center w-full p-2 text-2xl font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none"
-        >
-          <span className="mr-2 font-bold">Xiaomi Phones</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 ml-2 -mr-1"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-        <div
-          id="dropdown-menu"
-          className="text-base hidden absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1"
-        >
-          <a
-            href="/xiaomi"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-          >
-            Xiaomi Phones
-          </a>
-          <a
-            href="/redmi"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-          >
-            Redmi Phones
-          </a>
-          <a
-            href="/poco"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-          >
-            Poco Phones
-          </a>
-        </div>
+    <div className="flex p-5 items-center justify-center font-inter text-2xl	">
+      <div className="">
+        <Dropdown>
+          <Dropdown.Button>Xiaomi Phones</Dropdown.Button>
+          <Dropdown.Content>
+            <Dropdown.List>
+              <Dropdown.Item>
+                <a
+                  href="/xiaomi"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+                >
+                  Xiaomi Phones
+                </a>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <a
+                  href="/redmi"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+                >
+                  Redmi Phones
+                </a>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <a
+                  href="/poco"
+                  className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+                >
+                  Poco Phones
+                </a>
+              </Dropdown.Item>
+            </Dropdown.List>
+          </Dropdown.Content>
+        </Dropdown>
       </div>
-    </nav>
+    </div>
   );
-};
+}
 
-export default index;
+export default Index;
+
+const DropdownContext = React.createContext({
+  open: false,
+  setOpen: () => {},
+});
+
+// dropdown component for wrapping and providing context
+function Dropdown({ children, ...props }) {
+  const [open, setOpen] = React.useState(false);
+  const dropdownRef = React.useRef(null);
+  // dropdown context for open state
+  // click listeners for closing dropdown
+  React.useEffect(() => {
+    // close dropdown if click outside
+    function close(e) {
+      if (!dropdownRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+    // add or remove event listener
+    if (open) {
+      window.addEventListener("click", close);
+    }
+    // cleanup
+    return function removeListener() {
+      window.removeEventListener("click", close);
+    };
+  }, [open]); // only run if open state changes
+
+  return (
+    <DropdownContext.Provider value={{ open, setOpen }}>
+      <div ref={dropdownRef} className="">
+        {children}
+      </div>
+    </DropdownContext.Provider>
+  );
+}
+
+// dropdown button for triggering open
+function DropdownButton({ children, ...props }) {
+  const { open, setOpen } = React.useContext(DropdownContext); // get the context
+
+  // to open and close the dropdown
+  function toggleOpen() {
+    setOpen(!open);
+  }
+
+  return (
+    <button
+      onClick={toggleOpen}
+      className="rounded px-4 py-2 font-medium text-black flex items-center"
+    >
+      {children}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        width={15}
+        height={15}
+        strokeWidth={4}
+        stroke="currentColor"
+        className={`ml-2 ${open ? "rotate-180" : "rotate-0"}`}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+        />
+      </svg>
+    </button>
+  );
+}
+
+// dropdown content for displaying dropdown
+function DropdownContent({ children }) {
+  const { open } = React.useContext(DropdownContext); // get the context
+
+  return (
+    <div
+      className={`absolute z-20 rounded border border-gray-300 bg-white overflow-hidden my-1 overflow-y-auto ${
+        open ? "shadow-md" : "hidden"
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
+// dropdown list for dropdown menus
+function DropdownList({ children, ...props }) {
+  const { setOpen } = React.useContext(DropdownContext); // get the context
+
+  return (
+    <ul
+      onClick={() => setOpen(false)}
+      className="divide-y divide-gray-200 text-gray-700"
+      {...props}
+    >
+      {children}
+    </ul>
+  );
+}
+
+// dropdown items for dropdown menus
+function DropdownItem({ children, ...props }) {
+  return (
+    <li>
+      <button
+        className="py-3 px-5 whitespace-nowrap hover:underline"
+        {...props}
+      >
+        {children}
+      </button>
+    </li>
+  );
+}
+
+// optional - but I like this pattern to know it must be a child of Dropdown
+Dropdown.Button = DropdownButton;
+Dropdown.Content = DropdownContent;
+Dropdown.List = DropdownList;
+Dropdown.Item = DropdownItem;
