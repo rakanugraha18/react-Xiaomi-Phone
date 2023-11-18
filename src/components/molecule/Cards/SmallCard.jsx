@@ -4,6 +4,7 @@ import { CartContext } from "../../../context/CartProvider.jsx";
 import CustomButton from "../../Atoms/WithCVA/CustomButton.jsx";
 import TitleCard from "../../Atoms/InsideCard/TitleCard.jsx";
 import ImgCard from "../../Atoms/InsideCard/ImgCard.jsx";
+import LearnMoreButton from "../../Atoms/WithCVA/LearnMoreButton.jsx";
 
 export default function SmallCard() {
   const [dataPoco, setDataPoco] = useState([]);
@@ -41,7 +42,6 @@ export default function SmallCard() {
                   className={`flex flex-col bg-[#ffffff] items-center md:relative font-inter pt-10 px-5 text-center gap-2 md:hover:shadow-lg md:hover:ease-out md:duration-[250ms]`}
                 >
                   <TitleCard
-                    id="1"
                     Title={poco.name}
                     Specs={poco.specs}
                     StartingPrice={poco.price}
@@ -61,7 +61,9 @@ export default function SmallCard() {
                       hover="bg_soft"
                       onClick={() => addToCart(poco)}
                     />
-                    <CustomButton
+                    {/* <LearnMoreButton id={poco.id} /> */}
+                    <LearnMoreButton
+                      id={poco.id}
                       text="Learn More"
                       intent="light"
                       rounded="yes"
@@ -70,7 +72,7 @@ export default function SmallCard() {
                       onClick={() => addToCart(poco)}
                     />
                   </div>
-                  <ImgCard PhonePic={poco.image} />
+                  <ImgCard id={poco.id} PhonePic={poco.image} />
                 </div>
               );
             })}
