@@ -2,6 +2,8 @@ import React from "react";
 import { cva } from "class-variance-authority";
 import { Link } from "react-router-dom";
 
+// ADD ANY EXTRA STYLYING USING styling= "" 
+
 const Variants = cva(
   /* button base style */
   "box-border align-middle p-[9px] px-[30px] flex h-auto w-auto  transition-colors duration-150 text-[18px] md:text-[16px] lg:text-[19px] font-normal leading-[14px] md:leading-[29px]",
@@ -12,7 +14,7 @@ const Variants = cva(
         xsmall: ["text-xs", "py-1", "px-1"],
         small: ["text-sm", "py-1", "px-2"],
         medium: ["text-base", "py-2", "px-4"],
-        large: ["text-lg", "py-4", "px-8"],
+        large: "text-lg p-[9px] px-[30px]",
       },
       /* button colors */
       intent: {
@@ -79,12 +81,16 @@ const CustomButton = ({
   order,
   size,
   media,
+  styling, // Add custom styles not found in variants
 }) => {
   const variants = { intent, border, hover, rounded, icon, order, size, media };
 
   return (
     <Link to={to}>
-      <button onClick={onClick} className={Variants(variants)}>
+      <button
+        onClick={onClick}
+        className={`${Variants(variants)} ${styling}`}
+      >
         {order === "iconFirst" && icon && <div>{icon}&nbsp;</div>}
         {text}
         {order === "textFirst" && icon && <div>&nbsp;{icon}</div>}
