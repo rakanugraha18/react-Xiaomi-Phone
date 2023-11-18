@@ -1,16 +1,17 @@
 import React from "react";
 import PocoSection from "../components/organism/Products/PocoSection";
-import TitleSeeAll from "../components/Atoms/BannerSeeAll/TitleSeeAll";
+import NavbarProducts from "../components/organism/Navbar/NavbarProducts";
 
 function Poco() {
   return (
     <>
-      <div className="bg-[#F7F7F7] h-30 flex flex-col items-center justify-center z-0 md:gap-2 md:p-5">
-        <TitleSeeAll
-          SeriesName="Seri Poco"
-          Motto="Extreme performance, extreme price"
-        />
-      </div>
+      <NavbarProducts
+        titleHead="POCO Phones"
+        title1="POCO Phones"
+        title2="Xiaomi Phones"
+        title3="Redmi Phones"
+      />
+
       <div>
         <PocoSection />
       </div>
