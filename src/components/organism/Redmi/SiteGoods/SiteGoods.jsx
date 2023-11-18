@@ -3,7 +3,6 @@ import "./SiteGoods.css";
 import SiteGoodsType from "../../../molecule/Redmi/SiteGoodsType/SiteGoodsType";
 
 import RedmiNote11 from "../../../../../public/redmi/redmi-note11.webp";
-import RedmiNote11 from "../../../../../public/redmi/redmi-note11.webp";
 import RedmiNote11Pro from "../../../../../public/redmi/redmi-note11pro.webp";
 import RedmiNote11Pro5G from "../../../../../public/redmi/redmi-note11pro5G.webp";
 import Redmi102022 from "../../../../../public/redmi/redmi10-2022.webp";
