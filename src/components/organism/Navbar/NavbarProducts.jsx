@@ -1,7 +1,8 @@
 import React from "react";
 // app component
 function NavbarProducts(props) {
-  const { title1, title2, title3, titleHead } = props;
+  const { title1, title2, title3, titleHead, toTitle1, toTitle2, toTitle3 } =
+    props;
   return (
     <div className="flex p-5 items-center justify-center font-inter text-2xl	">
       <div className="">
@@ -11,7 +12,7 @@ function NavbarProducts(props) {
             <Dropdown.List>
               <Dropdown.Item>
                 <a
-                  href="/xiaomi"
+                  href={toTitle1}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
                 >
                   {title1}
@@ -19,7 +20,7 @@ function NavbarProducts(props) {
               </Dropdown.Item>
               <Dropdown.Item>
                 <a
-                  href="/redmi"
+                  href={toTitle2}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
                 >
                   {title2}
@@ -27,7 +28,7 @@ function NavbarProducts(props) {
               </Dropdown.Item>
               <Dropdown.Item>
                 <a
-                  href="/poco"
+                  href={toTitle3}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
                 >
                   {title3}
