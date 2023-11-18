@@ -1,6 +1,6 @@
 import React from "react";
 import "./BannerTitle.css";
-import "../../organism/Redmi/RedmiPhoneList.css";
+// import "../../organism/Redmi/RedmiPhoneList.css";
 
 const BannerTitle = (props) => {
   const { Images } = props;
