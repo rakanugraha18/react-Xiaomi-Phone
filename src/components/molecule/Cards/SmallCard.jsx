@@ -8,8 +8,8 @@ import LearnMoreButton from "../../Atoms/WithCVA/LearnMoreButton.jsx";
 
 export default function SmallCard() {
   const [dataPoco, setDataPoco] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostPerPage] = useState(8);
+  const [currentPage, setCurrentPage] = useState(3);
+  const [postsPerPage, setPostPerPage] = useState(7);
 
   const { cartItems, addToCart } = useContext(CartContext);
 
@@ -25,9 +25,9 @@ export default function SmallCard() {
     getApiPoco();
   }, []);
 
-  const firstPostIndex = currentPage + 2; // 3 = 1 + 2
-  const lastPostIndex = postsPerPage - 1; // 7 = 8 - 1
-  const currentSmallCard = dataPoco.slice(firstPostIndex, lastPostIndex); // index ke 7, (sampai) index ke 8
+  // const firstPostIndex = currentPage + 2; // 3 = 1 + 2
+  // const lastPostIndex = postsPerPage - 1; // 7 = 8 - 1
+  const currentSmallCard = dataPoco.slice(currentPage, postsPerPage); // index ke 7, (sampai) index ke 8
 
   return (
     <>
@@ -69,7 +69,6 @@ export default function SmallCard() {
                       rounded="yes"
                       border="always"
                       size="small"
-                      onClick={() => addToCart(poco)}
                     />
                   </div>
                   <ImgCard id={poco.id} PhonePic={poco.image} />
