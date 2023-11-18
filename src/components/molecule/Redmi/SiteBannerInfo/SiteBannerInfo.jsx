@@ -1,5 +1,10 @@
 import React from "react";
 import "./SiteBannerInfo.css";
+
+import BannerButton from "../../../Atoms/BannerButton/BannerButton";
+import BannerTitle from "../../../Atoms/BannerTitle/BannerTitle";
+import BannerSubtitle from "../../../Atoms/BannerSubtitle/BannerSubtitle";
+import BannerPrice from "../../../Atoms/BannerPrice/BannerPrice";
 // import BannerButton from "../../Elements/BannerButton/BannerButton";
 // import BannerTitle from "../../Elements/BannerTitle/BannerTitle";
 // import BannerSubtitle from "../../Elements/BannerSubtitle/BannerSubtitle";

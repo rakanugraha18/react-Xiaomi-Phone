@@ -9,7 +9,7 @@ const ImgFlagship = (props) => {
         <img
           src={`${PhonePicMobile}`}
           alt="phone1"
-          className="inset-0 object-cover w-full h-full"
+          className="inset-0 object-cover w-full h-[460px]"
         />
       </picture>
     </Link>
