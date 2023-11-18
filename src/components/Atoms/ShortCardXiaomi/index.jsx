@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const ShortCardXiaomi = (props) => {
   const { Title, Specs, StartingPrice, PreviousPrice, PhonePic } = props;
   return (
