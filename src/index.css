@@ -365,14 +365,6 @@ select:focus {
 
 /* ACCOUNT CSS END */
 
-/*CSS TO TOGGLE BUTTON ICON */
 
-.toggle_icon a button div {
-  display: none;
-}
 
-@media (min-width: 720px) {
-  .toggle_icon a button div {
-    display: inline-block;
-  }
-}
+
