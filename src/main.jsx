@@ -19,6 +19,7 @@ import Poco from "./pages/Poco.jsx";
 import XiaomiPro from "./pages/XiaomiPro.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import DetailPoco from "./pages/ProductDetails/Poco/index.jsx";
+import RedmiList from "./pages/Redmi.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
       { path: "/Leadership", element: <Leadership /> },
       { path: "/Privacy", element: <Privacy /> },
       { path: "/Poco", element: <Poco /> },
+      { path: "/redmi", element: <RedmiList /> },
       { path: "/xiaomi", element: <XiaomiPro /> },
       { path: "*", element: <Error /> },
       { path: "/checkout", element: <Checkout /> },
