@@ -1,7 +1,7 @@
-import LayoutXiaomiPro from "../components/organism/Products/XiaomiProSection";
+import XiaomiProSection from "../components/organism/Products/XiaomiProSection";
 
 const XiaomiPro = () => {
-  return <LayoutXiaomiPro />;
+  return <XiaomiProSection />
 };
 
 export default XiaomiPro;

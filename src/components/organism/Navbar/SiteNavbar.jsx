@@ -4,7 +4,7 @@ import List from "../../Atoms/Header/List";
 import SearchButton from "../../molecule/Search/SearchButton";
 import ThemeSwitch from "../../molecule/ThemeSwitch";
 
-const Navbar = () => {
+const SiteNavbar = () => {
   return (
     <nav className="h-full w-full flex mx-auto items-center justify-between">
       <ul className="flex w-full h-full items-center">
@@ -30,4 +30,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SiteNavbar;

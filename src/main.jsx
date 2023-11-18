@@ -15,9 +15,10 @@ import About from "./pages/About.jsx";
 import Agreement from "./pages/Agreement.jsx";
 import Leadership from "./pages/Leadership.jsx";
 import Privacy from "./pages/Privacy.jsx";
-import PocoList from "./components/molecule/Smartphone/PocoList.jsx";
+import Poco from "./pages/Poco.jsx";
 import XiaomiPro from "./pages/XiaomiPro.jsx";
 import Checkout from "./pages/Checkout.jsx";
+import DetailPoco from "./pages/ProductDetails/Poco/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,10 +34,11 @@ const router = createBrowserRouter([
       { path: "/Agreement", element: <Agreement /> },
       { path: "/Leadership", element: <Leadership /> },
       { path: "/Privacy", element: <Privacy /> },
-      { path: "/PocoList", element: <PocoList /> },
+      { path: "/Poco", element: <Poco /> },
       { path: "/xiaomi", element: <XiaomiPro /> },
       { path: "*", element: <Error /> },
       { path: "/checkout", element: <Checkout /> },
+      { path: "/detail/:id", element: <DetailPoco /> },
     ],
   },
 ]);

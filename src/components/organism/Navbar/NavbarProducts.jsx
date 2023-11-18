@@ -1,35 +1,37 @@
 import React from "react";
 // app component
-function Index() {
+function NavbarProducts(props) {
+  const { title1, title2, title3, titleHead, toTitle1, toTitle2, toTitle3 } =
+    props;
   return (
     <div className="flex p-5 items-center justify-center font-inter text-2xl	">
       <div className="">
         <Dropdown>
-          <Dropdown.Button>Xiaomi Phones</Dropdown.Button>
+          <Dropdown.Button>{titleHead}</Dropdown.Button>
           <Dropdown.Content>
             <Dropdown.List>
               <Dropdown.Item>
                 <a
-                  href="/xiaomi"
+                  href={toTitle1}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
                 >
-                  Xiaomi Phones
+                  {title1}
                 </a>
               </Dropdown.Item>
               <Dropdown.Item>
                 <a
-                  href="/redmi"
+                  href={toTitle2}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
                 >
-                  Redmi Phones
+                  {title2}
                 </a>
               </Dropdown.Item>
               <Dropdown.Item>
                 <a
-                  href="/poco"
+                  href={toTitle3}
                   className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
                 >
-                  Poco Phones
+                  {title3}
                 </a>
               </Dropdown.Item>
             </Dropdown.List>
@@ -40,7 +42,7 @@ function Index() {
   );
 }
 
-export default Index;
+export default NavbarProducts;
 
 const DropdownContext = React.createContext({
   open: false,

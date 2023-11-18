@@ -179,61 +179,12 @@ body {
 
 /* HOME CSS END */
 
-/* CART CSS SART */
-.nav-checkout-step {
-  align-items: center;
-  color: #d0d0d0;
-  display: flex;
-  font-size: 18px;
-  position: relative;
-}
+/* CART CSS START */
 
-.first ~ .nav-checkout-step {
-  color: #d0d0d0;
-  border-color: #d0d0d0;
-}
 
-.first ~ .nav-checkout-step:before {
-  content: "";
-  background-color: #d0d0d0;
-  height: 1px;
-  margin: 0 18px;
-  width: 0;
-  /* Additional pseudo-element styles here, if needed */
-}
 
-@media (min-width: 768px) {
-  .first ~ .nav-checkout-step:before {
-    width: 57px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .first ~ .nav-checkout-step:before {
-    width: 157px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .first ~ .nav-checkout-step:before {
-    width: 257px;
-  }
-}
-
-.nav-checkout-number {
-  align-items: center;
-  border: 2px solid;
-  border-radius: 12px;
-  box-sizing: border-box;
-  display: inline-flex;
-  height: 30px;
-  justify-content: center;
-  width: 30px;
-  margin-right: 8px;
-}
-
-.first ~ .nav-checkout-number {
-  color: #d0d0d0;
+#cart-quantity-buttons {
+ border: 1px solid black;
 }
 
 /* CART CSS END */
