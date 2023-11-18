@@ -20,12 +20,12 @@ const TabbedInterface = () => {
   };
 
   return (
-    <div id='account-form' className="mi-layout__card bg-formBackground container px-[100px] py-8 border mx-auto mt-[-50px]">
+    <div className="mi-layout__card bg-formBackground container px-[50px] py-8 border-formBackground mx-auto mt-[-50px]">
       <QrButton />
-      <ul className="flex">
+      <ul id='account-form-navigation' className="flex gap-4">
         <li
           onClick={() => handleTabClick('login')}
-          className={`cursor-pointer px-4 py-2 ${activeTab === 'login' ? ' text-text' : 'text-gray-300'
+          className={`cursor-pointer  ${activeTab === 'login' ? ' text-text border-b border-b-[5px] border-b-accent' : 'text-gray-300'
             }`}
         >
 
@@ -34,23 +34,23 @@ const TabbedInterface = () => {
         </li>
         <li
           onClick={() => handleTabClick('register')}
-          className={`cursor-pointer px-4 py-2 ${activeTab === 'register' ? 'text-text' : 'text-gray-300'
+          className={`cursor-pointer px-4 ${activeTab === 'register' ? 'text-text border-b border-b-[5px] border-b-accent' : 'text-gray-300'
             }`}
         >
           Daftar
         </li>
       </ul>
 
-      <div>
+      <div id='account-forms'>
         {activeTab === 'login' && (
           <div>
             {/* Login form */}
             <form className='bg-formBackground'>
               <div className='flex flex-col space-y-5'>
                 <input type="email" placeholder="Email"
-                  className="border w-full h-[30px] mt-[10px] mb-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
+                  />
                 <input type="password" placeholder="Password"
-                  className="border w-full h-[30px] mt-[10px] mb-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" /></div>
+                  className="" /></div>
               <div className='mt-4 flex flex-col space-y-4'>
                 <button type="submit"
                   className="disabled w-full text-center p-4 bg-[#ffbe99] text-white">Masuk</button>
@@ -78,23 +78,23 @@ const TabbedInterface = () => {
             <form>
             <CountrySelector/>
 
-              <input type="password" placeholder="Sandi"
-                className="border w-full h-[30px] mt-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
+              <input type="password" placeholder="Email"
+                />
+              <input type="password" placeholder="Setel sandi"
+                 />
               <input type="password" placeholder="Masukan sandi Anda lagi"
-                className="border w-full h-[30px] mt-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
-              <input type="password" placeholder="Masukan sandi Anda lagi"
-                className="border w-full h-[30px] mt-[10px] py-[30px] px-[20px] bg-gray-100 text-[#999]" />
+                 />
               <p className="text-[13px] text-text leading-tight">Sandi harus terdiri dari 8-16 karakter dan
                 mencakup angka dan huruf</p>
               <div>
                 <div className='flex items-start space-x-1 py-4'>
-                  <input
+                  <input className=''
         type="checkbox"
         checked={isChecked}
         onChange={handleCheckboxChange}
       />
       
-      <label className='flex flex-row space-x-4' htmlFor="checkbox"><span className="text-[13px]">
+      <label className='flex flex-row space-x-4' htmlFor="checkbox"><span className="text-[13px] text-[#999]">
                   Saya telah membaca dan menyetujui Perjanjian Pengguna dan Kebijakan Privasi Xiaomi.
                 </span></label>
                 </div>
@@ -104,16 +104,13 @@ const TabbedInterface = () => {
         <button
           type="submit"
           className={`w-full text-center p-4 ${
-            isChecked ? 'bg-[#ff5c00] text-white' : 'bg-[#ffbe99] text-gray-300'
+            isChecked ? 'bg-[#ff5c00] text-white' : 'bg-[#ffbe99] text-white'
           }`}
         >
           Berikutnya
         </button>
       </div>
     </div>
-
-
-              <div><a className="block text-right text-orange-600" href="">Buat menggunakan nomor telepon</a></div>
 
             </form>
           </div>

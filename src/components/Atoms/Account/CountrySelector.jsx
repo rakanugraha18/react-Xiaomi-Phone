@@ -11,7 +11,7 @@ const YourComponent = () => {
   const countryOptions = [
     'Select a country',
     'United States',
-    'Canada',
+    'Indonesia',
     'United Kingdom',
     'Germany',
     'France',
@@ -19,7 +19,7 @@ const YourComponent = () => {
   ];
 
   return (
-    <select className='bg-background   py-[10px] px-[20px] bg-gray-100 w-full h-[60px] ' value={selectedCountry} onChange={handleCountryChange}>
+    <select className='bg-inputBackground text-[#999]   py-[10px] px-[20px] w-full h-[60px] ' value={selectedCountry} onChange={handleCountryChange}>
       {countryOptions.map((country, index) => (
         <option key={index} value={country}>
           {country}

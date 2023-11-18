@@ -265,10 +265,28 @@ select:focus {
   padding-bottom: 10px;
 }
 
-.accountinput {
+#account-form-navigation {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 27px;
+  text-align: left;
+}
+
+#account-form-navigation li {
+  padding: 0;
+  height: max-content;
+}
+
+#account-forms input:not([type="checkbox"]){
   border: 1px solid rgb(213, 213, 213);
-  background: rgb(226, 226, 226);
-  color: #8a8686;
+  background: var(--color-input-background);
+  color: #999;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 30px 15px;
+  border-color: var(--color-input-background);
 }
 
 #google-button,
