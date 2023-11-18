@@ -15,7 +15,7 @@ const SmartPhone = () => {
       />
       <div className="flex justify-center items-center pb-6">
         <CustomButton
-          to="/PocoList"
+          to="/Poco"
           text="Lihat semua tipe"
           order="text_first"
           icon=">"

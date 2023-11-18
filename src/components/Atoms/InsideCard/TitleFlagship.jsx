@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import CustomButton from "../WithCVA/CustomButton";
 
 const TitleFlagship = (props) => {
   const { Title, Specs, CurrentPrice, PreviousPrice } = props;
