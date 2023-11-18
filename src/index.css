@@ -24,7 +24,7 @@ body {
 #top-site-header {
   box-shadow: 0 6px 16px 0 #1919190f;
   top: 0;
-  z-index: 20;
+  z-index: 999;
 }
 
 /* MI - HOME LOGO */
@@ -32,7 +32,7 @@ body {
   box-sizing: initial;
   flex-shrink: 0;
   position: relative;
-  z-index: 100;
+  z-index: 999;
 }
 
 #nav-logo-link,

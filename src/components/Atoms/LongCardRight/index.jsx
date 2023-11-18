@@ -4,7 +4,7 @@ const LongCardRight = (props) => {
     return (
         <>
             <section className="flex flex-col mt-[9px] md:hover:cursor-pointer" onClick="window.location.href = '/product/#'">
-                <div className="flex flex-col items-center relative z-20">
+                <div className="flex flex-col items-center relative z-20 md:z-">
                     <div className="absolute text-center pt-10 md:text-start md:start-[20%] md:top-[70px] md:w-[550px]">
                         <div className="font-inter font-bold leading-[36px] text-[30px] pb-3 md:text-[42px] md:leading-[50px]">
                             {Title}<span className="text-red-700">12</span>{Title2} <span className={`${classname}`}>{Title3}</span>
