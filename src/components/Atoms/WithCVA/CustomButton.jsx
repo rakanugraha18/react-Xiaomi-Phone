@@ -81,7 +81,7 @@ const CustomButton = ({
   order,
   size,
   media,
-  styling, // Add custom styles not found in variants
+  className, // Add custom styles not found in variants
 }) => {
   const variants = { intent, border, hover, rounded, icon, order, size, media };
 
@@ -89,7 +89,7 @@ const CustomButton = ({
     <Link to={to}>
       <button
         onClick={onClick}
-        className={`${Variants(variants)} ${styling}`}
+        className={`${Variants(variants)} ${className}`}
       >
         {order === "iconFirst" && icon && <div>{icon}&nbsp;</div>}
         {text}
