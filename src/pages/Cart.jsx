@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { CartContext } from '../context/cartProvider'
+import { CartContext } from '../context/CartProvider'
 import CheckoutNavbar from '../components/organism/Navbar/CheckoutNavbar'
 import EmptyCart from '../components/molecule/Cart/EmptyCart'
 import CustomButton from '../components/Atoms/WithCVA/CustomButton'
@@ -9,7 +9,7 @@ const Cart = () => {
  const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } = useContext(CartContext) 
  return (
     <div className="flex flex-col max-w-[100vw] h-full bg-white">
-   <CheckoutNavbar/>
+     <CheckoutNavbar activeStep={1} />
   <div className="flex flex-col gap-4 pt-4 bg-gray-100">
     {cartItems.map((item) => (
       <div className="flex justify-between items-center p-10 bg-white" key={item.id}>
