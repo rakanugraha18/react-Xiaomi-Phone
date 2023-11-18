@@ -8,8 +8,8 @@ import LearnMoreButton from "../../Atoms/WithCVA/LearnMoreButton.jsx";
 
 export default function LargeCard() {
   const [dataPoco, setDataPoco] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostPerPage] = useState(8);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [postsPerPage, setPostPerPage] = useState(2);
 
   const { cartItems, addToCart } = useContext(CartContext);
 
@@ -25,9 +25,9 @@ export default function LargeCard() {
     getApiPoco();
   }, []);
 
-  const firstPostIndex = currentPage - 1; // 0 = 1 - 1
-  const lastPostIndex = postsPerPage - 6; // 2 = 8 - 6
-  const currentLargCard = dataPoco.slice(firstPostIndex, lastPostIndex); // index ke 7, (sampai) index ke 8
+  // const firstPostIndex = currentPage - 1; // 0 = 1 - 1
+  // const lastPostIndex = postsPerPage - 6; // 2 = 8 - 6
+  const currentLargCard = dataPoco.slice(currentPage, postsPerPage); // index ke 7, (sampai) index ke 8
 
   return (
     <>
@@ -69,7 +69,6 @@ export default function LargeCard() {
                   order="text_first"
                   intent="dark_nobg"
                   media="mediumLight"
-                  onClick={() => addToCart(poco)}
                 />
               </div>
             </div>

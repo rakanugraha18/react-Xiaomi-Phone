@@ -25,9 +25,9 @@ export default function BannerCard() {
     getApiPoco();
   }, []);
 
-  const firstPostIndex = postsPerPage - 1; // 7 = 8 - 1
-  const lastPostIndex = currentPage + 1; // 8 = 7 + 1
-  const currentBannerImg = dataPoco.slice(firstPostIndex, lastPostIndex); // index ke 7, (sampai) index ke 8
+  // const firstPostIndex = postsPerPage - 1; // 7 = 8 - 1
+  // const lastPostIndex = currentPage + 1; // 8 = 7 + 1
+  const currentBannerImg = dataPoco.slice(currentPage, postsPerPage); // index ke 7, (sampai) index ke 8
 
   return (
     <>
@@ -58,7 +58,6 @@ export default function BannerCard() {
                     border="no"
                     icon="text_first"
                     hover="underline"
-                    onClick={() => addToCart(poco)}
                   />
                 </div>
               </div>
