@@ -4,6 +4,7 @@ import { CartContext } from "../../../context/CartProvider.jsx";
 import CustomButton from "../../Atoms/WithCVA/CustomButton.jsx";
 import TitleCard from "../../Atoms/InsideCard/TitleCard.jsx";
 import ImgCard from "../../Atoms/InsideCard/ImgCard.jsx";
+import LearnMoreButton from "../../Atoms/WithCVA/LearnMoreButton.jsx";
 
 export default function LargeCard() {
   const [dataPoco, setDataPoco] = useState([]);
@@ -61,7 +62,8 @@ export default function LargeCard() {
                 onClick={() => addToCart(poco)}
               />
               <div className="toogle_icon">
-                <CustomButton
+                <LearnMoreButton
+                  id={poco.id}
                   text="Learn More"
                   icon=">"
                   order="text_first"
@@ -71,7 +73,7 @@ export default function LargeCard() {
                 />
               </div>
             </div>
-            <ImgCard PhonePic={poco.image} />
+            <ImgCard id={poco.id} PhonePic={poco.image} />
           </div>
         ))}
       </div>
