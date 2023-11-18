@@ -236,6 +236,10 @@ body {
   color: #d0d0d0;
 }
 
+#cart-quantity-buttons {
+ border: 1px solid black;
+}
+
 /* CART CSS END */
 
 /* ABOUT CSS START */

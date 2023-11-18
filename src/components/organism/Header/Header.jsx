@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar'
+import SiteNavbar from '../Navbar/SiteNavbar'
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
     className=" bg-contrast text-text px-5 lg:px-6 sticky h-[48px] xl:h-[56px] "
     role="banner"
   >
-    <Navbar/>
+    <SiteNavbar/>
   </header>
   )
 }
