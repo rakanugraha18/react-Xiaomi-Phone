@@ -15,12 +15,12 @@ const LongCard = (props) => {
                 <div className="font-normal text-[14px] leading-[17px] py-4 mt-3">
                     <button href="#" disabled>
                         <span className={`text-[#8998BB] font-normal text-[15px] leading-[18px] md:bg-[#D0D0D0] ${classname} md:rounded-lg md:p-2 md:px-5 md:text-[18px] md:leading-[22px]`}>
-                            {Status} <span className="md:hidden">&gt</span>
+                            {Status} <span className="md:hidden">&gt;</span>
                         </span>
                     </button>
                     <a href="#">
                         <span className="font-normal text-[15px] leading-[18px] md:border md:border-black md:rounded-lg md:p-2 md:px-5">
-                            Learn More <span className="md:hidden">&gt</span>
+                            Learn More <span className="md:hidden">&gt;</span>
                         </span>
                     </a>
                 </div>
