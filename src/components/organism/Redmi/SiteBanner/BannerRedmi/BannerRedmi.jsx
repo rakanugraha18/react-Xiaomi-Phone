@@ -27,7 +27,7 @@ const BannerRedmi = (props) => {
       <SiteBannerInfo
         Title={HeaderImg}
         SubtitleUp={SubUp}
-        SubtitleDown={SubBot}
+        SubtitleBottom={SubBot}
         BPbefore={PriceBefore}
         BPafter={PriceAfter}
         urlBS={urlBeli}
