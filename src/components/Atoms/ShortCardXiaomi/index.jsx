@@ -27,11 +27,11 @@ const ShortCardXiaomi = (props) => {
               Learn More
             </button>
           </div>
-          <picture className="mt-5 ml-[150px] sm:ml-[10px] lg:ml-[65px]">
+          <picture className="flex mt-5 ml-[200px] sm:ml-[10px] lg:ml-[50px]">
             <img
               src={`${PhonePic}`}
               alt="phone3b"
-              className="h-[144px] w-[144px] md:h-[260px] md:w-[260px]"
+              className="h-[200px] w-[160px] md:h-[260px] md:w-[260px]"
             />
           </picture>
         </div>
