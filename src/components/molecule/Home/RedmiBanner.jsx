@@ -1,5 +1,5 @@
 import React from "react";
-import CustomButton from '../../Atoms/WithCVA/CustomButton'
+import CustomButton from "../../Atoms/WithCVA/CustomButton";
 
 const RedmiBanner = () => {
   return (
@@ -11,9 +11,7 @@ const RedmiBanner = () => {
         id="site-banner"
         className="relative flex justify-center items-start h-full max-h-full min-h-auto overflow-hidden"
       >
-        <picture
-          className="responsive-image flex h-full overflow-hidden absolute w-full z-1"
-        >
+        <picture className="responsive-image flex h-full overflow-hidden absolute w-full z-1">
           <source
             media="(max-width: 720px)"
             type="image/jpeg"
@@ -35,40 +33,57 @@ const RedmiBanner = () => {
         </picture>
         <div
           id="site-banner__info"
-          className="justify-center text-center md:text-left md:justify-left w-[500px] absolute z-2 top-[4%] gap-[20px] lg:gap-[50px] flex flex-col left-0 md:left-[15%] w-full py-[3.9vw] px-0 "
-          fmp-c="4"
+          className=" w-[500px] absolute z-2 top-[4%] gap-[20px] lg:gap-[50px] flex flex-col left-0 md:left-[15%] w-full py-[3.9vw] px-0 "
         >
+          <div className="w-full max-w-full flex flex-col items-center text-center md:text-left md:items-start">
+            <h2
+              id="title"
+              className="text-black block text-[40px] md:text-[2vw] lg:text-[40px] font-semibold m-0 overflow-hidden text-ellipsis whitespace-pre-line "
+            >
+              Redmi 12
+            </h2>
+            <h3
+              id="subtitle"
+              className="text-black block text-[20px] lg:text-[30px] font-normal m-0 overflow-hidden text-ellipsis whitespace-pre-line"
+            >
+              Memori tergede, harga terkece
+            </h3>
+
             <div className="flex flex-col gap-[20px]">
-                <h2
-            id="title"
-            className="text-black block text-[40px] md:text-[2vw] lg:text-[40px] font-semibold m-0 overflow-hidden text-ellipsis whitespace-pre-line "
-          >
-            Redmi 12
-          </h2>
-          <h3
-            id="subtitle"
-            className="text-black block text-[20px] lg:text-[30px] font-normal m-0 overflow-hidden text-ellipsis whitespace-pre-line"
-          >
-            Memori tergede, harga terkece
-          </h3>
+              <div className="text-[15px] lg:text-[25px]">
+                Mulai dari{" "}
+                <strong>
+                  <small>Rp&nbsp;</small>2.199.000
+                </strong>{" "}
+              </div>
+
+              <div className="flex space-x-[15px] justify-center md:justify-left w-full">
+            
+                  <CustomButton
+                    text="Beli sekarang"
+                    intent="dark"
+                    border="yes"
+                    hover="no"
+                    rounded="yes"
+                  />
+                  <div className="toogle_icon">
+                    {" "}
+                    <CustomButton
+                      text="Learn More"
+                      intent="dark_nobg"
+                      border="custom"
+                      hover="custom"
+                      rounded="yes"
+                      icon=">"
+                      order="textFirst"
+                    />
+                 
+                </div>
+              </div>
             </div>
-          
-          <div className="flex flex-col gap-[20px]">
-
-            <div className="text-[15px] lg:text-[25px]">Mulai dari <strong><small>Rp&nbsp;</small>2.199.000</strong> </div>
-
-
-             <div className="flex-inline space-x-[15px] justify-center md:justify-left w-full">
-               <div className="flex">
-                    <CustomButton className="bg-red-500" text="Beli sekarang" intent="dark" border="yes" hover="no" rounded="yes"/>
-                    <div className="toogle_icon">     <CustomButton text="Learn More" intent="dark_nobg" border="custom" hover="custom" rounded="yes" icon=">" order="textFirst"/>
-                </div></div>
-            </div>
-          </div>
-          
-           
           </div>
         </div>
+      </div>
     </section>
   );
 };

@@ -39,29 +39,27 @@ const XiaomiBanner = () => {
         </picture>
         <div
           id="site-banner__info"
-          className="text-center justify-center md:text-left md:justify-left w-[500px] absolute z-2 top-[5%] gap-[20px] flex flex-col left-0 md:left-[15%] w-full py-[3.9vw] px-0 "
-          fmp-c="4"
+          className="flex  w-[500px] absolute z-2 top-[5%] gap-[25px] left-0 md:left-[15%] w-full py-[3.9vw] px-0 flex-col "
+    
         >
+          <div className="w-full max-w-full flex flex-col items-center md:items-start">
+
           <h2
             id="title"
-            className="text-white block text-[40px] md:text-[2vw] lg:text-[3vw] font-semibold m-0 overflow-hidden text-ellipsis whitespace-pre-line "
+            className="text-white block text-[40px] md:text-[2vw] lg:text-[3vw] font-semibold leading-0 m-0 overflow-hidden text-ellipsis whitespace-pre-line "
           >
             Xiaomi 13T
           </h2>
           <h4
             id="subtitle"
-            className="text-white block text-[20px] lg:text-[30px] font-normal m-0 mt-[0.7vw] overflow-hidden text-ellipsis whitespace-pre-line"
+            className="text-white block text-[20px] lg:text-[30px] font-normal m-0 overflow-hidden leading-0 text-ellipsis whitespace-pre-line"
           >
             Masterpiece in sight
           </h4>
-          <div
-            id="cta"
-            className="flex-inline sm:justify-center md:justify-left"
-          >
-            <div>
-              <CustomButton to="/store" text="Beli Sekarang" intent="light" rounded="yes"/>
-            </div>
-          </div>
+        
+              <CustomButton className="mt-6 no-arrow" to="/store" text="Beli Sekarang" intent="light" rounded="yes"/></div>
+          
+         
         </div>
       </div>
     </section>
