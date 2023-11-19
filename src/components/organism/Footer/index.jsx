@@ -1,8 +1,28 @@
 import React from "react";
 import GooglePlay from "/src/assets/global/google-play-logo.svg";
-{
-  /*Quick implementation, will be properly implemented later on*/
-}
+import FooterList from "./FooterList";
+
+const list1 = [
+  { to: 'redmi', pagename: 'Redmi Note 11' },
+  { to: 'redmi', pagename: 'Redmi 10A' },
+  { to: 'redmi', pagename: 'Redmi AC' },
+  
+];
+
+const list2 = [
+  { to: '#', pagename: 'Garansi' },
+  { to: '#', pagename: 'Service Center Resmi' },
+];
+
+const list3 = [
+  { to: '/about', pagename: 'Tentang Kita' },
+  { to: '/about', pagename: 'Leadership Team'},
+  { to: '/about', pagename: 'Kebijakan Privasi'},
+  { to: '#', pagename: 'Integrity and Compliance'},
+  { to: '#', pagename: 'Trust Center'},
+
+];
+
 const Footer = () => {
   return (
     <footer className="w-full h-fit bg-[#191919] text-white flex justify-center">
@@ -14,65 +34,25 @@ const Footer = () => {
             id="list"
             className="hidden md:flex flex-row text-left w-full lg:w-[65%]  h-full">
             <div className="w-[40%] xl:w-[30%] h-full pr-5 ">
-              <h3 className="mb-[16px]">PRODUK</h3>
-              <ul className="flex flex-col">
-                <li>
-                  <a href="">Redmi Note 11</a>
-                </li>
-                <li>
-                  <a href="/">Redmi 10A</a>
-                </li>
-                <li>
-                  <a href="/">Redmi 10C</a>
-                </li>
-              </ul>
+            <FooterList listtitle="PRODUCT" listprops={list1}/>
             </div>
-            <div className=" w-[auto] h-full pr-5 ">
-              <h3 className="mb-[16px]">DUKUNGAN</h3>
-              <ul className="flex flex-col flex-nowrap">
-                <li>
-                  <a href="">Panduan Pengguna</a>
-                </li>
-                <li>
-                  <a href="">Kewajiban pendaftaran IMEI ponsel Anda</a>
-                </li>
-                <li>
-                  <a href="">Garansi</a>
-                </li>
-                <li>
-                  <a href="">Service Center resmi</a>
-                </li>
-              </ul>
+            <div className=" w-[auto] h-full pr-5">
+            <FooterList listtitle="DUKUNGAN" listprops={list2}/>
             </div>
             <div className=" w-auto h-full px-10 ">
-              <h3 className="mb-[16px]">TENTANG</h3>
-              <ul className="flex flex-col">
-                <li>
-                  <a href="./about">Tentang Kita</a>
-                </li>
-                <li>
-                  <a href="./founders">Leadership Team</a>
-                </li>
-                <li>
-                  <a href="./privacy">Kebijakan privasi</a>
-                </li>
-                <li>
-                  <a href="./agreement">Integrity and compliance</a>
-                </li>
-                <li>
-                  <a href="./index">Trust Center</a>
-                </li>
-              </ul>
+            <FooterList listtitle="TENTANG" listprops={list3}/>
+            
             </div>
           </div>
           <div
             id="info"
             className="p-0 lg:pl-20 md:flex flex-col w-full lg:w-[35%] bg-[#191919] h-full items-start justify-between">
             <div id="info-warpper" className="w-full">
-              <div className="flex lg:flex-col w-full justify-between">
+              <div className="flex flex-col w-full justify-between">
                 <div id="footer-follow">
                   <h3 className="footer_title">Ikuti sosial media Xiaomi</h3>
                   <ul className="flex gap-5 pt-4">
+
                     <li>
                       <a
                         href="https://www.facebook.com/XiaomiIndonesia"
