@@ -69,6 +69,7 @@ const RedmiBanner = () => {
                   <div className="toogle_icon">
                     {" "}
                     <CustomButton
+                      to="/redmi"
                       text="Learn More"
                       intent="dark_nobg"
                       border="custom"

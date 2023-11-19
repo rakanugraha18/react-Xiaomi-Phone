@@ -10,13 +10,9 @@ const XiaomiBanner = () => {
       <div
         id="site-banner"
         className="relative flex justify-center items-start h-full max-h-full min-h-auto overflow-hidden text-white"
-        data-ot-expose='{"event":"view_promotion","tip":{"c":"13982-1|1-banner-event"},"link":"https://www.mi.co.id/id/product/xiaomi-13t-leica/","elementName":"Buy Now","elementTitle":"Xiaomi 13T"}'
-        role="button"
-        tabIndex="-1"
       >
         <picture
           className="responsive-image flex h-full overflow-hidden absolute w-full z-1"
-          fmp-c="4"
         >
           <source
             media="(max-width: 720px)"
@@ -39,7 +35,7 @@ const XiaomiBanner = () => {
         </picture>
         <div
           id="site-banner__info"
-          className="flex  w-[500px] absolute z-2 top-[5%] gap-[25px] left-0 md:left-[15%] w-full py-[3.9vw] px-0 flex-col "
+          className="flex  w-[500px] absolute z-2 top-[5%] gap-[25px] left-0 md:left-[15%] py-[3.9vw] px-0 flex-col "
     
         >
           <div className="w-full max-w-full flex flex-col items-center md:items-start">
@@ -57,7 +53,7 @@ const XiaomiBanner = () => {
             Masterpiece in sight
           </h4>
         
-              <CustomButton className="mt-6 no-arrow" to="/store" text="Beli Sekarang" intent="light" rounded="yes"/></div>
+              <CustomButton className="mt-6 no-arrow" to="/xiaomi" text="Beli Sekarang" intent="light" rounded="yes"/></div>
           
          
         </div>

@@ -53,6 +53,10 @@ body {
 
 /* Nav links*/
 
+ul .only-medium, ul .only-medium a {
+height: 100%;
+}
+
 .link-border {
   border-bottom: 3px solid #00000000;
   border-top: 3px solid #0000;
