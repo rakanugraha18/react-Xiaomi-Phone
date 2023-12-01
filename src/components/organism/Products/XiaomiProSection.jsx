@@ -1,11 +1,11 @@
-import Xiaomi from "../../molecule/Xiaomi";
-import Nav from "../../molecule/Xiaomi/Nav";
+import BannerCardXiaomi from "../../molecule/Xiaomi/BannerCardXiaomi";
+import CardXiaomi from "../../molecule/Xiaomi/CardXiaomi";
 
 const XiaomiProSection = () => {
   return (
     <>
-      <Nav></Nav>
-      <Xiaomi />;
+      <BannerCardXiaomi />
+      <CardXiaomi />
     </>
   );
 };

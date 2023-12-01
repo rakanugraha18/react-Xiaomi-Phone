@@ -1,6 +1,6 @@
 import React from "react";
 import "./BannerPrice.css";
-import "../../organism/Redmi/RedmiPhoneList.css";
+// import "../../organism/Redmi/RedmiPhoneList.css";
 
 const BannerPrice = (props) => {
   const { PriceAfter = "2.099.000", PriceBefore = "2.599.000" } = props;
