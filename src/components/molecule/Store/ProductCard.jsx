@@ -4,7 +4,7 @@ import DiscountBadge from './DiscountBadge';
 import StatusBadge from './StatusBadge';
 
 const ProductCard = ({ productData }) => (
-  <div className="mb-12 p-4 md:w-1/2">
+  <div className="mb-12 p-4 md:w-1/2 cursor-pointer">
     <div className="rounded-md overflow-hidden hover:shadow-lg bg-slate-50 duration-300">
       <div className="container">
         <div className="flex flex-wrap">
