@@ -1,6 +1,6 @@
 const StoreTagline = () => {
     return (
-        <section id="Store" className="pt-28 pb-16 bg-slate-100">
+        <section id="Store" className="pt-28 pb-16">
             <div className="w-full px-4">
                 <div className="max-w-xl mx-auto text-center mb-16">
                     <h4 className="font-semibold text-lg mb-2 uppercase">Our Phone</h4>
