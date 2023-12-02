@@ -72,8 +72,8 @@ const BannerCardXiaomi = () => {
               </div>
             </div>
             <ImgFlagship
-              PhonePicDesktop="/public/smartphone/1desktop.webp"
-              PhonePicMobile="/public/smartphone/1mobile.webp"
+              PhonePicDesktop="/smartphone/1desktop.webp"
+              PhonePicMobile="/smartphone/1mobile.webp"
             ></ImgFlagship>
           </>
         ))}
