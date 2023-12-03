@@ -5,7 +5,7 @@ import ListCard from "../../molecule/Error/Card/ListCard";
 const LayoutError = () => {
   return (
     <>
-      <BannerError ErrorPicDesktop="/public/error/page-404.png" />
+      <BannerError ErrorPicDesktop="/error/page-404.png" />
 
       <Judul />
 
